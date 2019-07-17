@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import "mixin";
+
+/*--------------------------------------------------------------------------
+共通スタイル - PC & SP
+--------------------------------------------------------------------------*/
+/* 共通パーツ：タグ要素
+------------------------------------------------ */
+p { line-height: 1.8;}
+img { object-fit: cover;}
+
+/* 共通パーツ：カラムパーツ
+------------------------------------------------ */
+.bl_columnUnitArea { margin-top: 2vw; display: flex; justify-content: space-between;
+	> [class^="bl_column"] {
+		&:first-of-type { margin-left: 0;}
+	}
+	.bl_columnHalf { width: calc(50% - 1vw);}
+	.bl_columnThird_one { width: calc(33.33333% - 1vw);}
+	.bl_columnThird_two { width: calc(66.66666% - 1vw);}
+	.bl_columnFourth_one { width: calc(25% - 1vw);}
+}
+
+/* 共通パーツ：コンテンツエリア
+------------------------------------------------ */
+.mainContent { padding:0 6vw; margin: 2vw 0 0;}
+.mainContent a { color: #000;}
+.content2 { color: #fff; padding: 2vw; background: #352e32;}
+.content2 a { color: #fff;}
+
+/* 共通パーツ：見出し
+------------------------------------------------ */
+.barLine { font-size: 18px; letter-spacing: 0.2em; color: #fff; padding: 0.6vw 1.6vw; background: #6B645F;}
+.underLine2 { width:100%; font-size: 30px; font-weight: bold; color:#FD7D2C; letter-spacing: 0.2em; margin:0; padding-bottom: 10px; position: relative;}
+.underLine2::after { content: ''; width: 100%; height: 7px; position: absolute; left: 0; bottom: 0; border-top: 3px solid black; border-bottom: 1px solid black;}
+.bl_contTtl_wide { width: calc(100% + 12vw); font-size: 30px; font-weight: bold; color: #c69c6d; letter-spacing: 0.1em; text-align: center; margin: 0 -6vw; padding: 0.8vw; background: #352E32;
+	> span { font-size: 0.6em; vertical-align: middle; margin-left: 0.5em;}
+}
+
+/* 共通パーツ：オプションパーツ
+------------------------------------------------ */
+.orange { color:#FD7D2C;}
+.gold { color:#C69C6D;}
+.textCenter { text-align:center;}
+.textLeft { text-align:left;}
+.textRight { text-align:right;}
+
+/* パンくず */
+.siteTree{ margin: 1.3vw 6vw 0;}
+
+/* リンクボタン */
+[class^="bl_linkBtn_"] {
+	> a { letter-spacing: 0.2em; text-align:center; padding: 1.2vw; display: block;}
+}
+.bl_linkBtn_beige {
+	> a { color: $baseColor01; background: $baseColor02;}
+}
+.bl_linkBtn_brown {
+	> a { color: #fff; background: $baseColor01;}
+}
+
+/* ギャラリー */
+.bl_photoGallery { display: flex; justify-content: space-between;}
+.bl_photoGallery .bl_photoThumb > ul { font-size: 0;}
+.bl_photoGallery .bl_photoThumb > ul > li { display: inline-block;}
+.bl_photoGallery .is_over img { opacity: 0.5;}
+
+/* ページャー */
+.bl_postPager { text-align: right; margin-top: 8vw;}
+.bl_postPager > li { margin: 0 0.5em; display: inline-block;}
+
+
+/* インデント付リスト */
+.bl_indentList_1em { margin-top: 2vw;
+	> ul li { text-indent: -1em; padding-left: 1em;}
+}
+
+
+/*--------------------------------------------------------------------------
+　共通スタイル - PC Only
+--------------------------------------------------------------------------*/
+@include mediaQ(PC) {
+
+	/* 共通パーツ：オプションパーツ
+	------------------------------------------------ */
+	/* 電話リンク無効 */
+	a[href^="tel:"] { pointer-events: none;}
+
+	/* 共通パーツ：オプションパーツ
+	------------------------------------------------ */
+	/* リンクボタン */
+	[class^="bl_linkBtn_"] {
+		> a:hover { opacity: 0.7;}
+	}
+	.is_linkHover > a:hover { opacity: 1;}
+	.bl_linkBtn_beige.is_linkHover {
+		> a:hover { background: $baseColor01;}
+	}
+	.bl_linkBtn_brown.is_linkHover {
+		> a:hover { background: $baseColor02;}
+	}
+
+	/* ギャラリー */
+	.bl_photoGallery .bl_photoCurrent { width: calc(33.333% - 1vw);}
+	.bl_photoGallery .bl_photoThumb { width: calc(66.666% - 1vw);}
+	.bl_photoGallery .bl_photoThumb > ul > li { width: calc((100% / 4) - 1vw); margin: 1vw 0 0 1vw;}
+	.bl_photoGallery .bl_photoThumb > ul > li:nth-of-type(-n+4) { margin-top: 0;}
+	.bl_photoGallery .bl_photoThumb > ul > li:nth-of-type(4n+1) { margin-left: 0;}
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　共通スタイル - SP Only
+--------------------------------------------------------------------------*/
+@include mediaQ(SP) {
+	/* 共通パーツ：コンテンツエリア
+	------------------------------------------------ */
+	.mainContent { padding: 0 4vw;}
+	.mainContent2 { width: 100%;}
+
+	.content2 { padding: 5vw 4vw;}
+
+	/* 共通パーツ：見出し
+	------------------------------------------------ */
+	.barLine { font-size: 16px; padding: 2.4vw 3vw;}
+	.underLine2 { font-size: 20px; letter-spacing: 0.1em; padding-bottom: 3%; }
+	.underLine2::after { height: 5px; border-top-width: 2px;}
+	.bl_contTtl_wide { width: calc(100% + 8vw); font-size: 18px; margin: 0 -4vw; padding: 2.4%;}
+
+	/* 共通パーツ：カラムパーツ
+	------------------------------------------------ */
+	.bl_columnUnitArea { margin-top: 5vw; flex-wrap: wrap;
+		> [class^="bl_column"] { width: 100%; margin: 3vw 0 0;
+			&:first-of-type { margin-top: 0;}
+		}
+		.bl_columnFourth_one { width: calc(50% - 1vw);
+			&:nth-of-type(-n+2) { margin-top: 0;}
+		}
+	}
+
+	/* 共通パーツ：オプションパーツ
+	------------------------------------------------ */
+	.siteTree { font-size: 13px;}
+
+	/* リンクボタン */
+	[class^="bl_linkBtn_"] {
+		> a { letter-spacing: 0.2em; padding: 3% 2%;}
+	}
+
+		/* ギャラリー */
+		.bl_photoGallery { flex-direction: column;}
+		.bl_photoGallery .bl_photoCurrent { width: 100%;}
+		.bl_photoGallery .bl_photoThumb { width: 100%; margin-top: 4%;}
+		.bl_photoGallery .bl_photoThumb > ul > li { width: calc((100% / 3) - 2%); margin: 2% 0 0 2%;}
+		.bl_photoGallery .bl_photoThumb > ul > li:nth-of-type(-n+3) { margin-top: 0;}
+		.bl_photoGallery .bl_photoThumb > ul > li:nth-of-type(3n+1) { margin-left: 0;}
+
+	/* インデント付リスト */
+	.bl_indentList_1em { margin-top: 6vw;}
+
+} /* @media END */

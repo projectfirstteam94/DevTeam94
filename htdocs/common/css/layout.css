@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　Basic - PC & SP
+--------------------------------------------------------- */
+html, body { height: 100%; }
+
+html { font-size: 62.5%; -webkit-text-size-adjust: none; }
+
+body { font-size: 15px; font-family: 'Old Standard TT', serif, "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "HGS明朝E,メイリオ", Meiryo, serif; line-height: 1.2; color: #333; letter-spacing: 0.02em; background: #fff; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; -webkit-font-feature-settings: "palt"; font-feature-settings: "palt"; }
+
+img { max-width: 100%; height: auto; vertical-align: top; display: block; transition: all 0.5s; }
+
+figure { border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+/* clear */
+.clear { clear: both !important; }
+
+/* clearfix */
+.cFix:after { content: ""; clear: both; display: block; }
+
+/* ---------------------------------------------------------
+　Link Style - PC & SP
+--------------------------------------------------------- */
+a { transition: all 0.3s; }
+
+a:link, a:visited, a:active { color: #666; text-decoration: none; }
+
+a:hover > img { opacity: 0.8; }
+
+/* ---------------------------------------------------------
+　Wrap - PC & SP
+--------------------------------------------------------- */
+.ly_wrap { width: 100%; min-height: 100%; padding: 6.2vw 0 26vw; overflow: hidden; position: relative; }
+
+/* ---------------------------------------------------------
+　Head - PC & SP
+--------------------------------------------------------- */
+.ly_head { width: 100%; position: fixed; top: 0; left: 0; z-index: 100; /* Gnav */ }
+
+.ly_head .ly_headInner { padding: 1vw 0; background: #352e32; }
+
+.ly_head .bl_headLogo { width: 9.5vw; position: absolute; top: 0; left: 6vw; z-index: 10; }
+
+.ly_head .bl_headTel { width: 50vw; margin-left: 25vw; }
+
+.ly_head .bl_gnav { background: rgba(0, 0, 0, 0.7); }
+
+.ly_head .bl_gnav .bl_gnavInner > li span, .ly_head .bl_gnav .bl_gnavInner > li a { color: #fff; }
+
+.ly_head .bl_gnav .bl_gnavInner > li span.it_navLink2, .ly_head .bl_gnav .bl_gnavInner > li a.it_navLink2 { pointer-events: none; }
+
+/* ---------------------------------------------------------
+　Main - PC & SP
+--------------------------------------------------------- */
+.ly_main { width: 100%; margin-top: 4vw; padding-bottom: 12vw; }
+.ly_main2 { margin-top: 0; }
+
+/* ---------------------------------------------------------
+　Foot - PC & SP
+--------------------------------------------------------- */
+.ly_foot { width: 100%; background: #352E32; clear: both; position: absolute; bottom: 0; left: 0; }
+
+.ly_foot .bl_footNav { padding: 1vw 0; background: #c69c6d; }
+
+.ly_foot .bl_footNav .bl_footNavInner { width: 80%; height: 10vw; margin: 0 auto; display: flex; flex-flow: column wrap; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li { height: calc(100% / 3); font-size: 1.1vw; line-height: 1.5; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li::before { content: ''; width: 1px; height: 3.3vw; vertical-align: middle; display: inline-block; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li a, .ly_foot .bl_footNav .bl_footNavInner > li span { color: #fff; display: inline-block; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li a:hover { text-decoration: underline; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li.it_navChild { height: auto; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li.it_navChild .bl_footNavChild { margin-top: -8px; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li.it_navChild .bl_footNavChild > li { font-size: 1vw; }
+
+.ly_foot .bl_footNav .bl_footNavInner > li.it_navChild .bl_footNavChild > li > a::before { content: '▶ '; font-size: 0.1em; }
+
+.ly_foot .ly_footInner { width: 80%; margin: 0 auto; padding: 30px 0 20px; display: flex; align-items: center; }
+
+.ly_foot .bl_footLogo { width: 9vw; }
+
+.ly_foot .bl_footInfo { width: calc((100% - 9vw) - 4vw); color: #fff; margin-left: auto; }
+
+.ly_foot .bl_footInfo > dt { font-size: 1.5vw; letter-spacing: 0.3em; }
+
+.ly_foot .bl_footInfo > dd.it_infoAddress { margin-top: 10px; }
+
+.ly_foot .bl_footInfo > dd.it_infoTel { font-size: 3vw; text-align: right; }
+
+.ly_foot .bl_footInfo > dd.it_infoTel > a { color: #fff; pointer-events: none; }
+
+.ly_foot .bl_copyright { font-size: 11px; color: #fff; text-align: center; padding: 20px; display: block; }
+
+/* ---------------------------------------------------------
+　pagetop - PC & SP
+--------------------------------------------------------- */
+.ly_pagetop > a { width: 25px; font-size: 20px; position: absolute; right: 0; }
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) { body { background-attachment: fixed; }
+  /* pcBlock,pcInline */
+  .spBlock, .spInline { display: none; }
+  .pcBlock { display: block; }
+  .pcInline { display: inline-block; }
+  /* ---------------------------------------------------------
+　Head - PC Only
+--------------------------------------------------------- */
+  .ly_head { /* Gnav */ }
+  .ly_head .js_spGnavBtn { display: none; }
+  .ly_head .bl_gnav { padding-left: 14.5vw; }
+  .ly_head .bl_gnav .bl_gnavInner { display: flex; }
+  .ly_head .bl_gnav .bl_gnavInner > li { font-size: 1.1vw; letter-spacing: 0.1em; padding-left: 1.7vw; white-space: nowrap; position: relative; }
+  .ly_head .bl_gnav .bl_gnavInner > li > span, .ly_head .bl_gnav .bl_gnavInner > li > a { line-height: 4.5vw; display: inline-block; }
+  .ly_head .bl_gnav .bl_gnavInner > li > a:hover { color: #888; }
+  .ly_head .bl_gnav .bl_gnavInner > li:nth-child(3):hover .bl_gnav_child > li { height: 3.2vw; overflow: visible; }
+  .ly_head .bl_gnav .bl_gnavInner > li:nth-child(5):hover .bl_gnav_child > li { height: 3.2vw; overflow: visible; }	
+  .ly_head .bl_gnav .bl_gnavInner > li > .bl_gnav_child { width: 13vw; position: absolute; left: 0; }
+  .ly_head .bl_gnav .bl_gnavInner > li > .bl_gnav_child > li { height: 0; font-size: 1.1vw; text-align: center; overflow: hidden; transition: 0.2s; }
+  .ly_head .bl_gnav .bl_gnavInner > li > .bl_gnav_child > li:first-of-type > a { border: none; }
+  .ly_head .bl_gnav .bl_gnavInner > li > .bl_gnav_child > li > a { color: #fff; padding: 1vw; border-top: 1px solid rgba(255, 255, 255, 0.6); display: block; background: rgba(0, 0, 0, 0.7); }
+  .ly_head .bl_gnav .bl_gnavInner > li > .bl_gnav_child > li > a:hover { background: #000; } }
+
+/* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) { body { font-size: 15px; }
+  /* spBlock,spInline */
+  .pcBlock, .pcInline { display: none; }
+  .spBlock { display: block; }
+  .spInline { display: inline-block; }
+  /* ---------------------------------------------------------
+Wrap - SP Only
+--------------------------------------------------------- */
+  .ly_wrap { padding: 24.8vw 0 0; }
+  /* ---------------------------------------------------------
+　Head - SP Only
+--------------------------------------------------------- */
+  .ly_head { /* Gnav */ }
+  .ly_head .ly_headInner { padding: 3vw 0; }
+  .ly_head .bl_headLogo { width: 25vw; left: 3vw; }
+  .ly_head .bl_headTel { width: 63vw; margin-left: 32vw; }
+  .ly_head .bl_headTel > a > img { width: 100%; }
+  .ly_head .js_spGnavBtn { width: 9.5%; position: absolute; top: 26.4vw; right: 1.4vw; z-index: 100; }
+  .ly_head .bl_gnav { padding: 10% 0 0; display: none; }
+  .ly_head .bl_gnav .bl_gnavInner li { font-size: 15px; border-top: 1px solid rgba(255, 255, 255, 0.6); }
+  .ly_head .bl_gnav .bl_gnavInner li span, .ly_head .bl_gnav .bl_gnavInner li a { line-height: 2.8; padding: 0 7%; display: block; }
+  .ly_head .bl_gnav .bl_gnavInner li > .bl_gnav_child > li > a { padding-left: 15%; }
+  /* Gナビ オープン時 */
+  .is_gnavOpen { width: 100%; height: 100%; position: fixed; z-index: -1; overflow: hidden; }
+  .is_gnavOpen .ly_head { height: 100vh; overflow-y: scroll; }
+  /* ---------------------------------------------------------
+　Main - SP Only
+--------------------------------------------------------- */
+  .ly_main { margin-top: 8vw; }
+  /* ---------------------------------------------------------
+　Foot - SP Only
+--------------------------------------------------------- */
+  .ly_foot { position: static; }
+  .ly_foot .bl_footNav { display: none; }
+  .ly_foot .ly_footInner { width: 90%; padding: 5% 0; display: block; }
+  .ly_foot .bl_footLogo { width: 33vw; margin: 0 auto; }
+  .ly_foot .bl_footInfo { width: 100%; margin: 5% auto 0; text-align: center; }
+  .ly_foot .bl_footInfo > dt { font-size: 3.5vw; }
+  .ly_foot .bl_footInfo > dd.it_infoAddress { margin-top: 3%; }
+  .ly_foot .bl_footInfo > dd.it_infoTel { font-size: 6.3vw; text-align: inherit; margin-top: 5%; }
+  .ly_foot .bl_copyright { font-size: 11px; color: #fff; text-align: center; padding: 20px; display: block; } }
+
+/* @media END */

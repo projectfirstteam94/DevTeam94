@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>フォームチェック</title>
+<link href="css/hs.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<?php
+//アップロード処理
+if($_POST['news_insert']==1){
+	$fileName = $FILES['upfile']['name'];
+	if(!empty($fileName)){
+		$ext = substr($fileName, -3);
+		if ($ext != 'jpg' && $ext != 'gif' && $ext != 'png'){
+			$error['upfile'] ='type';
+			echo '<p>画像の形式は jpg , gif , png のいずれかにしてください。</p>';} 
+	}else{ //拡張子がjog, gif, pngであれば
+		if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
+		if (move_uploaded_file ($_FILES["upfile"]["tmp_name"], "files/" .date("Ymd-His") . $_FILES["upfile"]["name"])) {
+		chmod("files/" . date("Ymd-His") . $_FILES["upfile"]["name"], 0644);
+		echo '<script>alert("' . $_FILES["upfile"]["name"] . 'をアップロードしました。")</script>';
+		} else {
+		echo '<script>alert("' . $_FILES["upfile"]["name"] . 'ファイルをアップロードできません。")</script>';
+		}
+		} else {
+		echo '<script>alert("' . $_FILES["upfile"]["name"] . 'ファイルが選択されていません。")</script>';
+		}
+	} //拡張子がjog, gif, pngであれば（ここまで）
+}
+?>
+
+<input ID="submitButton" type="button" value="戻　る" onClick="history.back();">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

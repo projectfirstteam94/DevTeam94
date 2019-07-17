@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta name="description" content="ハワイへの各種お手続き・ご質問はこちらから">
+	<meta name="keywords" content="邸宅,オアフ島,マウイ島,ハワイ島,ハワイ,プライベートジェット,ビジネスジェット,ウェディング,ゴルフ,ディスカバリー,シゲルポレポレツアー,挙式,パーティー,高級,ダイヤモンドヘッド">
+	<title>Hawaiian Sky | ハワイアンスカイ -お問い合わせ</title>
+
+	<!-- ::: CSS / JS ::: -->
+	<link rel="stylesheet" href="/common/css/minireset.css">
+	<link rel="stylesheet" href="/common/css/layout.css">
+	<link rel="stylesheet" href="/common/css/style.css">
+	<link rel="stylesheet" href="/contact/css/contact.css">
+	<script src="/common/js/jquery-1.7.2.min.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126023437-1"></script>
+	<script src="/common/js/common.js"></script>
+	<script src="/common/js/linkdata.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		// 入力内容チェックのための関数
+		function input_check(){
+			var result = true;
+
+			// エラー用装飾のためのクラスリセット
+			$('#name').removeClass("inp_error");
+			$('#furigana').removeClass("inp_error");
+			$('#mail').removeClass("inp_error");
+			$('#mailCheck').removeClass("inp_error");
+			$('#tel').removeClass("inp_error");
+			$('#inqury').removeClass("inp_error");
+			$('#remarks').removeClass("inp_error");
+
+			// 入力エラー文をリセット
+			$("#name_error").empty();
+			$("#furigana_error").empty();
+			$("#mail_error").empty();
+			$("#mailCheck_error").empty();
+			$("#tel_error").empty();
+			$("#inqury_error").empty();
+			$("#remarks_error").empty();
+
+			// 入力内容セット
+			var name   = $("#name").val();
+			var furigana  = $("#furigana").val();
+			var mail  = $("#mail").val();
+			var mailCheck  = $("#mailCheck").val();
+			var tel  = $("#tel").val().replace(/[━.*‐.*―.*－.*\–.*ー.*\-]/gi,'');
+			var inqury  = $("#inqury").val();
+			var remarks  = $("#remarks").val();
+
+			// 入力内容チェック
+
+			// お名前
+			if(name == ""){
+				$("#name_error").html("<i class='fa fa-exclamation-circle'></i> お名前は必須です。");
+				$("#name").addClass("inp_error");
+				result = false;
+			}else if(name.length > 25){
+				$("#name_error").html("<i class='fa fa-exclamation-circle'></i> お名前は25文字以内で入力してください。");
+				$("#name").addClass("inp_error");
+				result = false;
+			}
+			// フリガナ
+			if(furigana == ""){
+				$("#furigana_error").html("<i class='fa fa-exclamation-circle'></i> フリガナは必須です。");
+				$("#furigana").addClass("inp_error");
+				result = false;
+			}else if(!furigana.match(/^[ァ-ロワヲンー 　\r\n\t]*$/)){
+				$("#furigana_error").html("<i class='fa fa-exclamation-circle'></i> フリガナは全角カタカナで入力してください。");
+				$("#furigana").addClass("inp_error");
+				result = false;
+			}else if(furigana.length > 25){
+				$("#furigana_error").html("<i class='fa fa-exclamation-circle'></i> フリガナは25文字以内入力してください。");
+				$("#furigana").addClass("inp_error");
+				result = false;
+			}
+			// メールアドレス
+			if(mail == ""){
+				$("#mail_error").html("<i class='fa fa-exclamation-circle'></i> メールアドレスは必須です。");
+				$("#mail").addClass("inp_error");
+				result = false;
+			}else if(!mail.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)){
+				$('#mail_error').html("<i class='fa fa-exclamation-circle'></i> 正しいメールアドレスを入力してください。");
+				$("#mail").addClass("inp_error");
+				result = false;
+			}else if(mail.length > 255){
+				$('#mail_error').html("<i class='fa fa-exclamation-circle'></i> 正しいメールアドレスを入力してください。");
+				$("#mail").addClass("inp_error");
+				result = false;
+			}
+			// メールアドレス確認
+			if(mailCheck != mail){
+				$("#mailCheck_error").html("<i class='fa fa-exclamation-circle'></i> メールアドレスが同一ではありません。");
+				$("#mailCheck").addClass("inp_error");
+				result = false;
+			}
+			// 電話番号
+			if(tel == ""){
+				$("#tel_error").html("<i class='fa fa-exclamation-circle'></i> 電話番号は必須です。");
+				$("#tel").addClass("inp_error");
+				result = false;
+			}else if((!tel.match(/^[0-9]+$/)) || (tel.length < 10)){
+				$('#tel_error').html("<i class='fa fa-exclamation-circle'></i> 正しい電話番号を入力してください。");
+				$("#tel").addClass("inp_error");
+				result = false;
+			}
+			// お問い合わせ内容
+			var inqury = $('#inqury :checked').length;
+			if(inqury == 0){
+				$("#inqury_error").html("<i class='fa fa-exclamation-circle'></i> いずれかを選択してください。");
+				$("#inqury").addClass("inp_error");
+				result = false;
+			}
+
+			// 内容
+			if(remarks == ""){
+				$("#remarks_error").html("<i class='fa fa-exclamation-circle'></i> 内容は必須です。");
+				$("#remarks").addClass("inp_error");
+				result = false;
+			}else if(remarks.match(/[<(.*)>.*<\/\1>]/)){
+				$('#remarks_error').html("<i class='fa fa-exclamation-circle'></i> HTML、URLの貼りつけは禁止しています。");
+				$("#remarks").addClass("inp_error");
+				result = false;
+			}else if(remarks.match(/^[ 　\r\n\t]*$/)){
+				$('#remarks_error').html("<i class='fa fa-exclamation-circle'></i> 内容は必須です。");
+				$("#remarks").addClass("inp_error");
+				result = false;
+			}
+
+			return result;
+		}
+	</script>
+
+</head>
+<body id="pagetop">
+<div class="ly_wrap">
+
+<!--#include virtual="/common/inc/header.html" -->
+
+<!-- ::: Top Visual ::: -->
+	<div class="ly_topVisual">
+		<div class="bl_topImg">
+			<img src="./images/top_contact.jpg" alt="Contact">
+		</div><!-- /.bl_topImg -->
+		<p class="siteTree"><a href="/" class="it_navLink0">ホーム</a> ≫ お問い合わせ</p>
+	</div><!-- /.ly_topVisual -->
+	<!-- ::: Top Visual ::: -->
+
+	<!-- ::: Main ::: -->
+	<div class="ly_main">
+		<!-- ::: ▼ Contents Edit Area ▼ ::: -->
+
+		<section class="un_contactArea mainContent">
+			<h1 class="underLine2">お問い合わせ</h1>
+
+			<p>以下の必須事項をご入力の上、確認ボタンをクリックしてください。<br>
+				クリック後お問い合わせ内容の確認画面に移動しますので、<br>
+				内容の確認後に送信ボタンをクリックしてください。</p>
+			<p class="orange">（※）は必須事項です</p>
+
+			<form method="post" action="/contact/mail_contact.php" onsubmit="return input_check()">
+				<table id="contactForm" class="un_formArea">
+					<tr>
+						<th>お名前（※）</th>
+						<td><input type="text" id="name" name="お名前" class="formInput"><span id="name_error" class="error_m"></span></td>
+						</tr><tr>
+						<th>フリガナ（※）</th>
+						<td><input type="text" id="furigana" name="フリガナ" class="formInput"><span id="furigana_error" class="error_m"></span></td>
+						</tr><tr>
+						<th>メールアドレス（※）</th>
+						<td><input type="mail" id="mail" name="メールアドレス" class="formInput"><span id="mail_error" class="error_m"></span></td>
+						</tr><tr>
+						<th>メールアドレス（確認）（※）</th>
+						<td><input type="mail" id="mailCheck" name="メールアドレス確認" class="formInput"><span id="mailCheck_error" class="error_m"></span></td>
+						</tr><tr>
+						<th>電話番号（半角）（※）</th>
+						<td><input type="tel" id="tel" name="電話番号" class="formInput"><span id="tel_error" class="error_m"></span></td>
+						</tr><tr>
+						<th>お問い合わせ内容<br>（複数選択可）（※）</th>
+						<td class="un_formCheckBlock">
+							<div id="inqury">
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="コンドミニアム">コンドミニアムについて</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="邸宅">邸宅について</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="ゴルフ">ゴルフについて*1</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="オプショナルツアー">オプショナルツアーについて</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="お問い合わせ・お申し込み方法">お問い合わせ・お申し込み方法について</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="お支払い方法／キャンセル">お支払い方法／キャンセルについて</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="プライバシーポリシー">プライバシーポリシーについて</label>
+								<label><input type="checkbox" name="お問い合わせ内容[]" value="その他">その他</label>
+								<span id="inqury_error" class="error_m"></span>
+							</div>
+						</td>
+						</tr><tr>
+						<th>内容（※）</th>
+						<td><textarea id="remarks" name="内容" class="formInput"></textarea><span id="remarks_error" class="error_m"></span></td>
+					</tr>
+				</table>
+				<input id="submitButton" type="submit" value="確　認">
+			</form>
+
+			<div class="bl_indentList_1em">
+				<ul class="contact_asterisk">
+					<li>※弊社から24時間以内（弊社の休日、祝祭日を除き）にご連絡を差し上げますが、回答、ご連絡がない場合、大変お手数ですが
+　お電話にてご連絡下さい。</li>
+					<li>
+					＊1.ゴルフ予約時必須事項(5項目)<br>
+1.ご希望のゴルフコース名   2.参加者の人数及び代表者の氏名   3.ご希望のスケジュール及び　スタート時間   4.ハワイの宿泊先のホテル名   5.日本での連絡先、住所、電話番号、メールアドレス   以上5項目を入力下さい。</li>
+					
+				</ul>
+			</div><!-- /.bl_indentList_1em -->
+
+			<p>こちらの入力フォームは宿泊先やプランニングなどのお問い合わせ専用です。<br>
+				プライベートジェットに関するお問い合わせは、下記リンク先のお問い合わせフォームをご利用ください。</p>
+
+			<div class="bl_linkBtn_brown">
+				<a href="/privatejet/jetcontact.html" class="it_navPath19">プライベートジェットの<br class="spInline">お問い合わせはコチラ</a>
+			</div><!-- /.bl_linkBtn_brown -->
+		</section>
+
+
+		<!-- ::: ▲ Contents Edit Area ▲ ::: -->
+	</div><!-- /.ly_main -->
+	<!-- ::: /Main ::: -->
+
+<!--#include virtual="/common/inc/footer.html" -->
+</div><!-- /.ly_wrap -->
+</body>
+</html>

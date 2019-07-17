@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*製作中メニュー*/
+#head_contents, #top, .mainContent, .mainContent2, #foot_tel{
+	display:none;	
+}
+#closed{
+	display:block;
+}
+
+#closed h3{
+	text-align:center;
+	font-size:5vw;
+	margin-top:15vw;
+}
+/*製作中メニュー*/

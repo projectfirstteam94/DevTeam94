@@ -1,0 +1,22 @@
+# 更新2019-05-22 
+
+#.htaccess閲覧防止
+AddHandler cgi-script htaccess
+
+# フォルダ閲覧防止
+Options -Indexes
+
+# ssi include
+Options +IncludesNOEXEC
+AddHandler server-parsed html
+
+# 表示ファイル優先度変更
+DirectoryIndex index.php index.html
+
+#ベーシック認証
+AuthUserfile "C:\xampp\htdocs\test-hawaii\.htpasswd"
+AuthGroupfile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+require valid-user
+

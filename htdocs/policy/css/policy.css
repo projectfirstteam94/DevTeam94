@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　policy/index.html - PC & SP
+--------------------------------------------------------- */
+/* プライバシーポリシー：テキスト
+------------------------------------------ */
+#policyText .barLine { margin-top: 3vw;}
+#policyText > p { margin-top: 2vw;}
+#policyText > table { margin-top: 3vw;}
+#policyText table tr td { vertical-align: top; line-height: 1.6; padding-top: 1em;}
+#policyText table tr:first-of-type td { padding-top: 0;}
+#policyText table tr td.indent { padding-left: 2vw;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* プライバシーポリシー：テキスト
+	------------------------------------------ */
+	#policyText .barLine { margin-top: 4vw;}
+	#policyText > p { margin-top: 5vw;}
+
+} /* @media END */

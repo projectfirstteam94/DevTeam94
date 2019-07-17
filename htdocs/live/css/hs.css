@@ -1,0 +1,1046 @@
+@charset "UTF-8";
+/* CSS Document */
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+         -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+body{
+	overflow-x: hidden; 
+	width: 100vw;
+	margin:     0;
+	max-width:100%;
+	font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+}
+
+h1{font-size:3.2vw;}
+h2{font-size:2.8vw;}
+h3{font-size:2.4vw;}
+h4{font-size:2vw;}
+h5{font-size:1.6vw;}
+
+a, a:link, a:visited {
+	text-decoration:none !important;
+}
+
+img{
+	object-fit: cover;
+}
+
+.clearText {
+	margin:0; padding:0;
+	height:0;
+	text-indent:100%;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+#closed{
+	display:none;
+}
+
+.underConstruction{
+	text-align:center;
+	margin:8vw 0 16vw;
+	display:none;
+}
+
+#head_contents{
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+}
+#head_logo img{
+	width:12.3vw;
+	float:left;
+	position:absolute;
+	top:0;
+	left:6vw;
+	z-index:10;
+	}
+	
+#head_telpc, #head_telsp{
+	clear:both;
+	width:100vw;
+	margin:0;
+	position:relative;
+	top:0;
+	left:0;
+	z-index:9;
+	height:9vw;
+	color:#c69c6d;
+	background-color:#352e32;
+}
+
+#head_telsp{
+	display:none;
+	height:23vw;
+}
+
+#head_telpc img{
+	width:70vw;
+	position:absolute;
+	top:2vw;
+	left:23vw;
+}
+
+#head_telsp img{
+	display:none;
+	width:58vw;
+	position:absolute;
+	top:2vw;
+	left:24vw;
+}
+
+#head_pcmenu{
+	margin:0;
+	display:block;
+	width:100vw;
+	height:5vw;
+	position:relative;
+	top:0;	left:0;
+	z-index:1;
+	color:white;
+	background-color:black;
+	opacity:0.7;
+}
+
+ul.pcmenu{
+	margin:0;
+	padding-left:20vw;
+	font-size:0px;
+}
+ul.pcmenu li{
+	text-align: center;
+	line-height:5vw;
+	padding-left:1.2vw;
+	font-size:1.2vw;
+	white-space:nowrap;
+}
+
+#top ul, #top img{
+	width:100vw;
+	margin:0;
+	padding:0;
+	object-fit: cover;
+}
+
+.topImage{
+	margin-top:9vw;
+	margin-bottom:0;
+}
+
+.siteTree{
+	font-size:1.5vw;
+	margin-top:0;
+	margin-left:6vw;
+}
+
+.split{
+	clear:both;
+	width:100vw;
+	margin-bottom:5vw;
+	height: 0;
+}
+
+.mainContent{
+	padding:0 6vw;
+	margin: 2vw 0 0;
+	white-space:nowrap;
+}
+
+.mainContent a{
+	color: black;
+}
+
+.mainContent2 a, .wideContent2 a, .content2 a{
+	color: white;
+}
+
+.mainContent h3, .mainContent2 h3{
+	vertical-align:middle;
+	font-size:2.4vw;
+	margin:0;
+}
+
+p{
+	font-size:1.5vw;
+}
+
+.content15{
+	width:14vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+}
+
+.content20{
+	width:19vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+	}
+	
+.content30{
+	width:28vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+	}
+
+.image30_1 img{
+	width:27vw;
+	padding:0 0.5vw;
+	}
+	
+.content40{
+	width:32vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+	}
+	
+.content60{
+	width:54vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+}
+
+.image60_3 img{
+	width:18vw;
+	}
+
+.image60_1 img{
+	width:54vw;
+	}
+
+.content70{
+	width:58vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+}
+
+.content80{
+	width:67vw;
+	display:inline-block;
+	vertical-align: top;
+	margin:0;
+	}
+		
+.content50{
+	width:42vw;
+	display:inline-table;
+	vertical-align:top;
+	}
+	
+.content50wide{
+	width:49vw;
+	display:inline-block;
+	vertical-align:top;
+	magin:0;
+	}
+
+.contentSplit{
+	margin:0;
+	width:2vw;
+	display:inline-table;
+	vertical-align:top;
+}
+
+.contentSplit1{
+	margin:0;
+	width:0.75vw;
+	display:inline-table;
+	vertical-align:top;
+}
+
+.content100{
+	width:86vw;
+	display:block;
+}
+
+hr{
+	margin:0;
+	border-top:solid 1px #ccc;
+	height:0;
+}
+
+
+.underLine2{
+	width:100%;
+	margin:0;
+	border-bottom:double 6px black;
+	color:#FD7D2C;
+}
+
+.orange{
+	color:#FD7D2C;
+}
+
+.newinfo p{
+	margin: 0;
+	line-height: 2.4em;
+	border-bottom: solid 1px black;
+}
+
+.recommendL, .recommendR{
+	margin:1vw 0;
+	display:inline-block;
+}
+
+.recommendL{
+	width:12vw;
+	position:static;
+}
+.recommendR{
+	width:29vw;
+	position:relative;
+	top:0;left:0.8vw;
+	z-index:-1;
+}
+.recommend img{
+	width:12vw;
+	display:inline-table;
+}
+
+.recommend h5{
+	margin:0;
+	font-size:1.5vw;
+	width:29vw;
+	display:inline-table;
+	color:#FD7D2C;
+}
+.recommend p{
+	margin:0;
+	font-size:1.2vw;
+	width:29vw;
+	line-height:1.5em;
+	white-space:normal;
+}
+
+.text_line{
+	display:inline-block;
+}
+
+.more{
+	font-size:1.1vw;
+	text-align:right;
+	}
+	
+.mainContent2{
+	width:100vw;
+	/*	position:relative;
+		top:0;left:0;
+		z-index:-1;*/
+	padding:1vw 6vw 3vw;
+	margin: 2vw 0 0;
+	white-space:nowrap;
+	color:white;
+	background-color:#352e32;
+}
+
+
+.restSearch p{
+	font-size:1.7vw;
+}
+
+.restSearch{
+	white-space:normal;
+}
+
+.restSearch img{
+	width:41vw;
+	margin:1vw ;
+}
+
+.photoList{
+	width:100vw;
+	white-space:normal;
+}
+
+.photoList h3{
+	width:86vw;
+	text-align:center;
+	color:#c69c6d;
+	margin-bottom:2vw;
+}
+
+.photoList p{
+	width:86vw;
+	text-align:center;
+}
+
+.photoBlock{
+	width:20vw;
+	margin:0 0.5vw;
+	display:inline-block;
+}
+
+.photoBlock img, .photoBlock h4, .photoBlock p{
+	width:20vw;
+}
+
+.photoBlock img{
+	margin-bottom:1vw;
+}
+.photoBlock H4{
+	margin:0;
+	text-align:center;
+	border-bottom:solid 1px black;
+}
+
+.photoBlock p{
+	margin:1vw 0 0;
+	text-align:left;
+	white-space:normal;
+}
+
+.photoList p.more{
+	font-size:1.1vw;
+	text-align:right;
+}
+
+#foot_pcmenu{
+	width:100vw;
+	padding:2vw 9vw 1.5vw 16vw;
+	text-align:center;
+	background-color:#c69c6d;
+}
+
+#foot_pcmenu a{
+	color:white;
+}
+
+#foot_pcmenu table{
+	table-layout:fixed;
+	width:76vw;
+	font-weight:bolder;
+	text-align:left;
+	font-size:1.2vw;
+}
+
+#foot_pcmenu td{
+	width:20vw;
+	margin:0; padding:0;
+	height:2.5vw;
+	color:white;
+	vertical-align:top;
+}
+
+#foot_pcmenu td.tdLeft{
+	width:15vw;
+		vertical-align:top;
+}
+
+
+td.table_small{
+	font-size:1.1vw;
+}
+
+#foot_tel{
+	width:100vw;
+	padding:1.5vw 12vw;
+	background-color:#352E32;
+}
+
+.footer_img{
+	display:inline-block;
+	width:20vw;
+}
+
+.footer_img img{
+	width:16vw;
+}
+
+.footer_text{
+	display:inline-block;
+	width:54vw;
+	line-height:1.8em;
+}
+
+#foot_tel h3, #foot_tel h1{
+	display:inline-block;
+	margin:0; padding:0;
+	color:white;
+}
+
+#foot_tel h3{
+	font-size:1.8vw;
+}
+
+#foot_tel h2{
+	margin-top:1.5vw;
+	text-align:right;
+	font-size:3.5vw;
+	color:white;
+}
+	
+#foot_tel h1{
+	font-size:2.8vw;
+}
+	
+#foot_tel p{
+	margin:0; padding:0;
+	font-size:1.5vw;
+	line-height:1.2em;
+	color:white;
+}
+
+/* 以降各ページごとの仕様*/
+
+/*サイトマップ*/
+#sitemapList p{
+	margin:12px 0 0;
+	font-size:medium;
+	line-height:1.3em;
+}
+
+#sitemapList p.indent0:before {
+	content: "█ ";
+}
+
+#sitemapList p.indent-1, #sitemapList p.indent-2, #sitemapList p.indent-3{
+	font-size:smaller;
+}
+
+#sitemapList p.indent-1:before{
+	content: "　┗ ";
+}
+
+#sitemapList p.indent-2:before{
+	content: "　　　┗ ";
+}
+
+#sitemapList p.indent-3:before{
+	content: "　　　　　┗ ";
+}
+
+
+
+/* 会社概要*/
+#companyData td{
+	font-size:1.8vw;
+	padding-left:2vw;
+}
+
+#companyData td.tdHead{
+	width:20%;
+	padding:0;
+	text-align:center;
+	color:white;
+	background-color:#6B645F;
+}
+
+.table_small{
+	font-size:1.1vw;
+}
+
+/*プライバシーポリシー */
+#policyText{
+		white-space:normal;
+}
+
+.barLine{
+	margin:0;
+	color:white;
+	background-color:#6B645F;
+	padding:0.5vw 1.6vw 0.3vw;
+}
+
+#policyText td{
+	vertical-align:top;
+	font-size:1.5vw;
+	line-height:1.6em;
+}
+
+#policyText td.indent{
+	padding-left:2vw;
+}
+
+/*お知らせ*/
+#news{
+
+}
+
+.wrap_pre{
+	white-space:pre;
+}
+
+#news p{
+	margin:1.5vw 0;
+}
+
+.newsUpdate{
+	text-align:right;
+	margin:-2.5vw 2vw 0 0;
+	letter-spacing:0.1em;
+	color:white;
+	font-size:small;
+	font-weight:lighter;
+}
+
+.hr_dashed{
+	border:none;
+    border-top:dashed 1px #ccc;
+    height:1px;
+    color:white;
+}
+
+/*お問い合わせ*/
+#contactForm{
+	width:100%;
+	font-size:1.5vw;
+	font-weight:bold;
+}
+
+#contactForm td{
+	padding:0 0.5vw;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border:solid 1px #352E32;
+	white-space:normal;
+	vertical-align:middle;
+	color:#352E32;
+	background-color:white;
+}
+
+#contactForm td.formHead{
+	width:28%;
+	text-align:center;
+}
+
+input.formInput{
+	width:100%;
+	height:2em;
+}
+
+textarea.formInput{
+	width:100%;
+	height:12em;
+}
+
+#submitButton{
+	text-align:center;
+	margin:2vw 0vw 0vw 35vw;
+	padding:0.5vw 5vw;
+	width:20vw;
+	font-size:2vw;
+	border-style: none;
+	background-color:#c69c6d;
+}
+
+.linkButton{
+	text-align:center;
+	margin:2vw 0vw 6vw 10vw;
+	padding:0.5vw 5vw;
+	width:70vw;
+	font-size:2.5vw;
+	border-style: none;
+	color:white;
+	background-color:#352E32;
+}
+
+/*お問い合わせ-チェック機構*/
+#contactForm td input[type="text"].inp_error,
+#contactForm td input[type="mail"].inp_error,
+#contactForm td input[ID="mailCheck"].inp_error,
+#contactForm td input[type="number"].inp_error,
+#contactForm td input[type="tel"].inp_error,
+#contactForm td #inqury.inp_error,
+#contactForm td textarea.inp_error {
+    border: 1px solid #F88A8A;
+    background: #F4D4D4;
+}
+
+span.error_m {
+    font-size: 1.3vw;
+    font-weight: normal;
+    color: #FF4040;
+    display: block;
+    margin: 0;
+}
+
+/*プライベートジェットお問い合わせ*/
+#BG_jet{
+	margin:0;
+	width:100%;
+	background-image:url(../img/TOP2_jetcontact.jpg);
+	background-size:cover;
+}
+
+H1.noLine{
+	margin:0;
+	font-size:5vw;
+	color:#c69c6d;
+	font-weight:lighter;
+	letter-spacing:0.1em;
+}
+
+H2{
+	text-align:center;
+	font-size:2vw;
+}
+
+/*このサイトについて*/
+.textCenter{
+	text-align:center;
+}
+
+.wideContent{
+	margin:0; padding:2vw 0;
+	width:100vw;
+	color:black;
+}
+
+.wideContent2{
+	margin:0; padding:2vw 0;
+	width:100vw;
+	color:white;
+	background-color:#352e32;
+}
+
+.wideContent2 h2{
+	line-height:2em;
+	color:#c69c6d;
+}
+
+.wrap_normal{
+	white-space:normal;
+}
+
+H3.aboutH3{
+	text-align:center;
+	font-size:2.8vw;
+	font-weight:lighter;
+	line-height:1.4em;
+	}
+	
+H3 rt{
+	font-size:1.1vw;
+}
+
+p.aboutP{
+	margin:1vw 0 0;
+}
+
+.content2{
+	color:white;
+	background-color:#352e32;
+}
+
+.linkButton2, .linkButton3{
+	text-align:center;
+	margin:0.5vw 6vw 3vw;
+	padding:0.5vw;
+	width:30vw;
+	font-size:2.2vw;
+	border-style: none;
+	color:#352E32;
+	background-color:#c69c6d;
+}
+
+.largeTel{
+	margin:0;
+	text-align:center;
+	font-size:4vw;
+	font-weight:lighter;
+}
+
+/*お問い合わせ・お申し込み方法*/
+.height24{
+	height:24vw;
+}
+
+.how2img{
+	margin:0.5vw 9vw 0;
+	width:24vw;
+}
+
+.largeTel2{
+	margin:0;
+	text-align:center;
+	font-size:6.5vw;
+	font-weight:lighter;
+	color:#c69c6d;
+}
+
+p.how2P{
+	margin:1vw 0;
+	color:#c69c6d;
+}
+
+.linkButton3{
+	margin:0.5vw 2.5vw 2.5vw;
+	width:37vw;
+	font-size:2.5vw;
+}
+
+/*お支払い方法／キャンセルについて*/
+#paymentData td{
+	font-size:1.4vw;
+	padding-left:1vw;
+	border:solid 1px #352E32;
+}
+
+#paymentData td.tdHead{
+	width:18%;
+	padding:1vw 0;
+	text-align:center;
+	color:white;
+	background-color:#6B645F;
+	border:solid 1px #352E32;
+}
+
+#paymentData td.tableSplit{
+	border-style:none;
+	text-align:center;
+	height:4vw;
+}
+
+#paymentData td.tableSplit img{
+	height:2vw;
+}
+
+#paymentData p.indent0{
+	font-weight:bold;
+	margin:0; padding:0;
+	line-height:0em;
+}
+
+#paymentData p.indent-2{
+	white-space:normal;
+	padding-left:2vw;
+}
+
+/*プライベートジェット*/
+#TOP_jet2{
+	height:42vw;
+	background-image:url(../img/TOP_jet2.jpg);
+	background-size:cover;
+	text-align:center;
+}
+
+#TOP_jet2 p, #TOP_jet2 H1{
+	margin:0;
+	letter-spacing:0.1em;
+}
+
+H1.topCatch{
+	font-size:3.2vw;
+	font-weight:lighter;
+	text-align:center;
+	letter-spacing:0.1em;
+}
+
+.gold{
+	color:#C69C6D;
+}
+
+.jetText{
+	padding-right:4vw;
+	padding-bottom:3vw;
+}
+
+img.width15{
+	width:15vw;
+}
+
+img.width20{
+	width:20vw;
+}
+
+img.width30{
+	width:28vw;
+}
+
+img.width40{
+	width:34vw;
+}
+
+img.width50{
+	width:49vw;
+}
+
+.jettTumb{
+	padding-left:4vw;
+}
+
+img.jetSample{
+	padding:0 0 1vw ;
+}
+
+img.width60_4{
+	width:12vw;
+}
+
+.linkButton4{
+	text-align:center;
+	vertical-align:middle;
+	padding:1.5vw 4vw;
+	font-size:2.4vw;
+	letter-spacing:0.2em;
+	border-style: none;
+	background-color:#352E32;
+}
+
+.over img{
+    opacity: 0.5;
+}
+
+.thumbNail ul{
+    margin: 0 0 0.5vw;
+    padding: 0;
+}
+
+.thumbNail li{
+    display: inline;
+    list-style: none;
+}
+
+
+
+/*コンドミニアムに泊まる*/
+#BG_condominium{
+	margin:0;
+	width:100%;
+	background-image:url(../img/TOP2_condominium.jpg);
+	background-size:cover;
+}
+
+#BG_condominium H1{
+	font-size:2.5vw;
+}
+
+.textLeft{
+	text-align-left;
+}
+
+.textRight{
+	text-align:right;
+}
+
+.linkButton5{
+	text-align:center;
+	vertical-align:middle;
+	padding:1vw 3vw;
+	font-size:1.4vw;
+	letter-spacing:0.2em;
+	line-height:1.5em;
+	border-style: none;
+	color:white;
+	background-color:#352E32;
+}
+
+#restText{
+	vertical-align:middle;
+}
+
+#restText H2{
+	padding-top:8vw;
+	font-size:3vw;
+}
+
+#restText p{
+	padding-left:1.8vw;
+}
+
+/*リアルタイム情報*/
+.liveUpdate{
+}
+
+/*シゲルと行くポレポレツアー*/
+.fontSize4{
+	font-size:4vw;
+}
+
+.fontSize2{
+	font-size:2vw;
+}
+
+.fontWeightL{
+	font-weight:lighter;
+	letter-spacing:0.1em;
+}
+
+.paddingLeft{
+	padding-left:2vw;
+}
+
+.bottom1{
+	margin-bottom:1vw;
+}
+
+/*コンドミニアム-オアフ島 他*/
+.BG_gray{
+	background-color:#6B645F;
+}
+
+.BG_dark{
+	background-color:#352E32;
+}
+
+.fontColor_White{
+	color:whitel;
+}
+
+.linkButton6{
+	text-align:center;
+	vertical-align:middle;
+	padding:0.6vw 1.2vw;
+	font-size:1.2vw;
+	letter-spacing:0.1em;
+	line-height:1.5em;
+	border-style: none;
+	color:white;
+	background-color:#352E32;
+}
+
+/* フォーム */
+.fontSizeS{
+	font-size:smaller;
+}
+
+.wordBreak{
+	word-wrap:break-word;
+}
+#dataList{
+	border-collapse:collapse;
+	font-size: 1.2vw;
+}
+
+#dataList .dataList_text{
+	width:76vw;
+	paddin: 1vw 0;
+}
+
+#dataList .dataList_image{
+	width:10vw;
+}
+
+#dataList .dataList_image img{
+	max-width: 9vw;
+	max-height: 6vw;
+}
+
+.borderBottom{
+	margin: 1.5vw 0 3vw;
+	border-bottom: 1px solid #ccc;
+}
+
+
+/*優先度の高いもの*/
+.noMargin{
+	margin:0;
+}
+
+.noPadding{
+	padding:0;
+}
+

@@ -1,0 +1,208 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　privatejet/index.html - PC & SP
+--------------------------------------------------------- */
+.ly_main { margin-top: 0;}
+.un_privatejetTtl { letter-spacing: 0.1em; color: #C69C6D; text-align: center;}
+
+/* トップビジュアル
+------------------------------------------ */
+.un_topTxt { color: #fff; line-height: 1.6; background: url(../images/intro_img01.jpg) 0 0 / 100% auto no-repeat;}
+.un_topTxt .un_topCatch02 { color: #FD7D2C; line-height: 1.6;}
+
+/* プライベートジェット：コンセプト
+------------------------------------------ */
+.un_conceptArea { width: 100%; color: #fff; background: #352e32;}
+.un_conceptArea .un_privatejetTtl { letter-spacing: 0.1em; color: #C69C6D; text-align: center;}
+.un_conceptArea .bl_columnUnitArea .bl_columnThird_two > p { margin-top: 2.2em;}
+.un_conceptArea .bl_columnUnitArea .bl_columnThird_two > p:first-of-type { margin-top: 0;}
+
+/* プライベートジェット：情報
+------------------------------------------ */
+.un_infoArea .bl_columnUnitArea { align-items: center;}
+.un_infoArea .un_jetInfoList > li { line-height: 1.8; white-space: nowrap; margin-right: 1.2em; display: inline-block;}
+.un_infoArea .bl_linkBtn_brown { margin: 0 auto;}
+.un_infoArea .bl_linkBtn_brown > a { color: #c69c6d;}
+
+
+/* ---------------------------------------------------------
+　privatejet/jetcontact.html - PC & SP
+--------------------------------------------------------- */
+/* プライベートジェットお問い合わせ：導入部分
+------------------------------------------ */
+.un_introArea { background: url(../images/intro_bg.jpg) 100% 50% / auto 100% no-repeat;}
+.un_introArea .siteTree { margin: 0;}
+.un_introArea .un_introTtl { color: #c69c6d;}
+
+/* プライベートジェットお問い合わせ：フォーム部分
+------------------------------------------ */
+.un_contactArea { color: #fff; background: #352e32;}
+.un_contactArea .un_formTtl { text-align: center;}
+.un_formArea { width: 100%; font-weight: bold; line-height: 2; margin-top: 1.2em; border-collapse: separate; border-spacing: 0 0.6em;}
+.un_formArea tr th,
+.un_formArea tr td { color:#352E32; border:solid 1px #352E32; background: #fff;}
+.un_formArea tr th { text-align: center;}
+.un_formArea tr td { vertical-align: middle;}
+.un_formArea tr td > input,
+.un_formArea tr td > select,
+.un_formArea tr td > textarea.formInput { width:100%; border: none;}
+.un_formArea tr td > input.formInput,
+.un_formArea tr td > input[type="number"],
+.un_formArea tr td > select { height: 2.5em; font-size: 15px; padding: 0.5em;}
+.un_formArea tr td > input[type="number"] { width: calc(100% - 2.2em);}
+.un_formArea tr td > textarea.formInput { height: 12em;}
+.un_formArea tr td.un_formCheckBlock { padding: 1em 0.5em;}
+.un_formArea tr td.un_formCheckBlock label { white-space: nowrap; display: inline-block;}
+.un_formArea tr td.un_formCheckBlock input[type="checkbox"] { margin-right: 0.3em;}
+#submitButton { font-weight: bold; font-family: "Georgia", "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "HGS明朝E,メイリオ", Meiryo, serif; text-align: center; border: none; background: #c69c6d; display: block;}
+
+/* プライベートジェットお問い合わせ：予約の流れ
+------------------------------------------ */
+.un_flowArea > table { width: 100%;}
+.un_flowArea > table td { line-height: 1.6; border:solid 1px #352E32;}
+.un_flowArea > table .un_tblHead { text-align:center; color: #fff; background: #6B645F; border:solid 1px #352E32;}
+.un_flowArea > table .un_payArrow { padding: 0; border:none;}
+.un_flowArea > table .un_payArrow::before { content: '';width: 0; height: 0; border-style: solid; border-color: #352e32 transparent transparent transparent; margin: 0 auto; display: block;}
+.un_flowArea > p { border-top: 2px solid #352E32;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* ---------------------------------------------------------
+	　privatejet/index.html - PC Only
+	--------------------------------------------------------- */
+	.un_privatejetTtl { font-size: 32px;}
+
+	/* トップビジュアル
+	------------------------------------------ */
+	.un_topTxt { height: 21.5vw; letter-spacing: 0.5em; padding: 4vw 6vw 0;}
+	.un_topTxt .un_topCatch01 { font-size: 1.4vw;}
+	.un_topTxt .un_topCatch02 { font-size: 2vw; margin-top: 1.2vw;}
+	.un_topTxt .un_topCatch03 { font-size: 1.8vw; margin-top: 1.2vw;}
+
+	/* プライベートジェット：コンセプト
+	------------------------------------------ */
+	.un_conceptArea { padding: 3vw 6vw;}
+	.un_conceptArea .bl_columnUnitArea { margin-top: 3vw;}
+	.un_conceptArea .bl_columnUnitArea .bl_columnThird_two > p { letter-spacing: 0.3em;}
+	.un_conceptArea .bl_columnUnitArea .bl_columnThird_one > img:not(:first-of-type) { margin-top: 2vw;}
+
+	/* プライベートジェット：情報
+	------------------------------------------ */
+	.un_infoArea { margin-top: 3vw; padding: 0 6vw;}
+	.un_infoArea .bl_photoGallery { margin-top: 3vw;}
+	.un_infoArea .bl_columnUnitArea { margin-top: 5vw;}
+	.un_infoArea .underLine2 { font-size: 25px;}
+	.un_infoArea .barLine { margin-top: 1.6vw;}
+	.un_infoArea .un_jetInfoList { margin-top: 1.6vw;}
+	.un_infoArea .bl_linkBtn_brown { width: 80%; font-size: 20px;}
+
+
+	/* ---------------------------------------------------------
+	　privatejet/jetcontact.html - PC Only
+	--------------------------------------------------------- */
+	/* プライベートジェットお問い合わせ：導入部分
+	------------------------------------------ */
+	.un_introArea { height: 23.6vw; min-height: 250px; padding: 0.8vw 6vw 0; }
+	.un_introArea .un_introTtl { font-size: 33px; margin-top: 1.8vw;}
+	.un_introArea .un_introTtl + p { margin-top: 1.6vw;}
+	.un_introArea p.orange { margin-top: 1.2vw;}
+
+	/* プライベートジェットお問い合わせ：フォーム部分
+	------------------------------------------ */
+	.un_contactArea { padding: 3vw 6vw 5vw;}
+	.un_contactArea .un_formTtl { font-size: 20px; letter-spacing: 0.3em;}
+	.un_formArea tr th { width: 28%; border-right: none;}
+	.un_formArea tr td.un_formCheckBlock label { margin-left: 2em; }
+	#submitButton { width: 18vw; font-size: 22px; margin: 4vw auto 0; padding: 0.6vw 4.6vw; cursor: pointer; transition: opacity 0.3s;}
+	#submitButton:hover { opacity: 0.7;}
+
+	/* プライベートジェットお問い合わせ：予約の流れ
+	------------------------------------------ */
+	.un_flowArea > .barLine { margin-top: 3vw;}
+	.un_flowArea > .barLine:nth-of-type(n+2) { margin-top: 6vw;}
+	.un_flowArea > table { margin-top: 2vw; padding-bottom: 2vw;}
+	.un_flowArea > table td { padding: 1.2vw 2vw;}
+	.un_flowArea > table .un_tblHead { width: 18%;}
+	.un_flowArea > table .un_payArrow { height: 5vw;}
+	.un_flowArea > table .un_payArrow::before { border-width: 1.5vw 5vw 0 5vw;}
+	.un_flowArea > p { margin-top: 3.5vw; padding-top: 3vw; }
+	.un_flowArea .bl_linkBtn_brown { max-width: 560px; font-size: 20px; margin: 5vw auto 0;}
+
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* ---------------------------------------------------------
+	　privatejet/index.html - SP Only
+	--------------------------------------------------------- */
+	.un_privatejetTtl { font-size: 18px;}
+
+	/* トップビジュアル
+	------------------------------------------ */
+	.un_topTxt { height: 38vw; letter-spacing: 0.2em; padding: 4% 5% 0; background-size: cover; background-position: 30% 50%;}
+	.un_topTxt .un_topCatch01 { font-size: 2vw;}
+	.un_topTxt .un_topCatch02 { font-size: 2.5vw; margin-top: 3%;}
+	.un_topTxt .un_topCatch03 { font-size: 2vw; margin-top: 3%;}
+
+	/* プライベートジェット：コンセプト
+	------------------------------------------ */
+	.un_conceptArea { padding: 8% 5%;}
+	.un_conceptArea .bl_columnUnitArea { margin-top: 7%;}
+	.un_conceptArea .bl_columnUnitArea .bl_columnThird_two > p { letter-spacing: 0.1em;}
+	.un_conceptArea .bl_columnUnitArea .bl_columnThird_one { margin-top: 8%;}
+	.un_conceptArea .bl_columnUnitArea .bl_columnThird_one > img { width: calc((100% - 5%) / 2); display: inline-block;}
+	.un_conceptArea .bl_columnUnitArea .bl_columnThird_one > img:not(:first-of-type) { margin-left: 3%;}
+
+	/* プライベートジェット：情報
+	------------------------------------------ */
+	.un_infoArea { margin-top: 8%; padding: 0 5%;}
+	.un_infoArea .bl_photoGallery { margin-top: 8%;}
+	.un_infoArea .bl_columnUnitArea .bl_columnHalf { margin-top: 15%;}
+	.un_infoArea .underLine2 { font-size: 22px;}
+	.un_infoArea .barLine { margin-top: 5.6%;}
+	.un_infoArea .un_jetInfoList { margin-top: 5%;}
+	.un_infoArea .bl_linkBtn_brown { width: 100%; font-size: 18px;}
+
+
+	/* ---------------------------------------------------------
+	　privatejet/jetcontact.html - SP Only
+	--------------------------------------------------------- */
+	/* プライベートジェットお問い合わせ：導入部分
+	------------------------------------------ */
+	.un_introArea { padding: 3% 4vw 42vw; background-size: auto 38vw; background-position: 100% 100%;}
+	.un_introArea .un_introTtl { font-size: 28px; margin-top: 5%;}
+	.un_introArea .un_introTtl + p { margin-top: 4%;}
+	.un_introArea p.orange { margin-top: 4%;}
+
+	/* プライベートジェットお問い合わせ：フォーム部分
+	------------------------------------------ */
+	.un_contactArea { padding: 7% 4vw 10%;}
+	.un_contactArea .un_formTtl { font-size: 16px; line-height: 1.6; letter-spacing: 0.2em;}
+	.un_formArea,
+	.un_formArea tbody,
+	.un_formArea tbody tr,
+	.un_formArea tbody tr th,
+	.un_formArea tbody tr td { width: 100%; display: block;}
+	.un_formArea tr th { margin-top: 1.5em; padding: 1.8% 3%; border-bottom: none;}
+	.un_formArea tr td.un_formCheckBlock label { display: block;}
+	#submitButton { width: 50%; font-size: 18px; margin: 9% auto 0; padding: 2.5% 5%;}
+
+	/* プライベートジェットお問い合わせ：予約の流れ
+	------------------------------------------ */
+	.un_flowArea > .barLine { margin-top: 6%;}
+	.un_flowArea > .barLine:nth-of-type(n+2) { margin-top: 12%;}
+	.un_flowArea > table { margin-top: 6%;}
+	.un_flowArea > table td { padding: 3% 4%;}
+	.un_flowArea > table .un_tblHead { width: 25%;}
+	.un_flowArea > table .un_payArrow { height: 40px;}
+	.un_flowArea > table .un_payArrow::before { border-width: 15px 40px 0 40px;}
+	.un_flowArea > p { margin-top: 6%; padding-top: 6%; }
+	.un_flowArea .bl_linkBtn_brown { font-size: 18px; margin-top: 10%;}
+
+} /* @media END */

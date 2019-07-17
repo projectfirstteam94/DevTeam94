@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　live/index.html - PC & SP
+--------------------------------------------------------- */
+/* リアルタイム情報：一覧
+------------------------------------------ */
+.un_postLive { border-top: 1px solid #000;}
+.un_postLive:first-of-type { padding-top: 0; border-top: none;}
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* リアルタイム情報：一覧
+	------------------------------------------ */
+	.un_postLive { width: 100%; margin-top: 5vw; padding-top: 5vw;}
+	.un_postLive .un_postBlock_head { width: calc(66.666% - 1vw);}
+	.un_postLive .un_postBlock_head .textRight { margin-top: 1vw;}
+	.un_postLive .un_postBlock_img { width: calc(33.333% - 1vw); float: right;}
+	.un_postLive .un_postBlock_txt { width: calc(66.666% - 1vw); margin-top: 2vw;}
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* リアルタイム情報：一覧
+	------------------------------------------ */
+	.un_postLive { margin-top: 12%; padding-top: 12%; display: flex; flex-flow: column;}
+	.un_postLive .un_postBlock_head { order: 0;}
+	.un_postLive .un_postBlock_head .textRight { margin-top: 2%;}
+	.un_postLive .un_postBlock_img { width: 70%; margin: 5% auto 0; order: 1;}
+	.un_postLive .un_postBlock_txt { margin-top: 6%; order: 2;}
+
+} /* @media END */

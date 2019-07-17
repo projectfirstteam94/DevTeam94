@@ -1,0 +1,39 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　news/index.html - PC & SP
+--------------------------------------------------------- */
+/* ニュース記事：一覧
+------------------------------------------ */
+.un_postNews { padding-bottom: 4vw; border-bottom: 1px dashed #ccc; }
+.un_postNews:first-of-type { padding-top: 0; border-top: none;}
+
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* ニュース記事：一覧
+	------------------------------------------ */
+	.un_postNews { width: 100%; margin-top: 5vw; }
+	.un_postNews .un_postBlock_head .hasImg { width: calc(66.666% - 1vw);}
+	.un_postNews .un_postBlock_head .textRight { margin-top: 1vw;}
+	.un_postNews .un_postBlock_img { width: calc(33.333% - 1vw); float: right;}
+	.un_postNews .un_postBlock_txt .hasImg { width: calc(66.666% - 1vw); margin-top: 2vw;}
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* ニュース記事：一覧
+	------------------------------------------ */
+	.un_postNews .barLine { text-align: center;}
+	.un_postNews { margin-top: 12%; display: flex; flex-flow: column;}
+	.un_postNews .un_postBlock_head { order: 0;}
+	.un_postNews .un_postBlock_head .textRight { margin-top: 2%;}
+	.un_postNews .un_postBlock_img { width: 70%; margin: 5% auto 0;  order: 1;  height: 100%; }
+	.un_postNews .un_postBlock_txt { order: 2;}
+	.un_postNews .un_postBlock_txt .hasImg { margin-top: 6%; }
+} /* @media END */

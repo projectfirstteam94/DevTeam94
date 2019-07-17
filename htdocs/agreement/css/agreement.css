@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+agreement/index.html - PC & SP
+--------------------------------------------------------- */
+/* 旅行業約款・条件書：テキスト
+------------------------------------------ */
+#agreementText .barLine { margin-top: 3vw;}
+#agreementText .bottom_boder{ border-bottom: 1px solid #352E32;}
+#agreementText > p { font-size: 13px; margin-top: 2vw;}
+#agreementText > table.textTable { font-size: 13px; margin-top: 0; border-collapse:separate; border-spacing: 4px;}
+#agreementText > table.textTable tr th { vertical-align: top; text-align: right; font-weight: normal; white-space: nowrap;}
+/* #agreementText table tr td.indent_1 { } インデントなし */
+#agreementText table tr td.indent_2 { padding-left:1em; text-indent:-1em}
+#agreementText table tr td.indent_3 { padding-left:2em; text-indent:-1em}
+
+/* 旅行業約款・条件書：表
+------------------------------------------ */
+#agreementText > table.itemTable { font-size: 13px; width: 100%; margin-top: 0; border-collapse:collapse; border: 1px solid #352E32;}
+#agreementText > table.itemTable td { border: solid gray; border-width: 0px 1px; padding: 4px 6px;}
+#agreementText > table.itemTable td.textAlignRight { text-align: right;}
+#agreementText > table.itemTable td.headCell1 { text-align: center; }
+#agreementText > table.itemTable td.titleCell1 { vertical-align: top; padding-left: 1.5em; text-indent:-1em}
+#agreementText > table.itemTable td.itemCell1 { vertical-align: top; text-align: left; padding-left: 2em; text-indent:-1em}
+#agreementText > table.itemTable td.itemCell2 { vertical-align: top; white-space: nowrap; padding: 4px 2vw;}
+#agreementText > table.itemTable td.topLine { border-top-width: 1px;}
+#agreementText > table.itemTable td.boxBorder { border-width: 1px; }
+
+/* 旅行業約款
+------------------------------------------ */
+ul.un_agreementList { margin: 3vw 0 3vw 0;}
+ul.un_agreementList li { margin-top: 0.8em;}
+ul.un_agreementList > li::before { content: '▶ '; margin-right: 0.2em; display: inline-block;}
+/* ul.un_agreementList li .un_sitemap_child { margin-left: 1em;}
+ul.un_agreementList li .un_sitemap_child li::before { content: '┣'; margin-right: 0.2em; display: inline-block;}
+ul.un_agreementList li .un_sitemap_child li:last-of-type::before { content: '┗';} */
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* 旅行業約款・条件書：テキスト
+	------------------------------------------ */
+	#agreementText .barLine { margin-top: 4vw;}
+	#agreementText > p { margin-top: 5vw;}
+
+} /* @media END */

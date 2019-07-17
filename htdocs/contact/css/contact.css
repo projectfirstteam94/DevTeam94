@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　contact/index.html - PC & SP
+--------------------------------------------------------- */
+.un_contactArea > p { margin-top: 1.2em;}
+.un_formArea { width: 100%; font-weight: bold; line-height: 2; margin-top: 1.2em; border-collapse: separate; border-spacing: 0 0.6em;}
+.un_formArea tr th,
+.un_formArea tr td { color:#352E32; border:solid 1px #352E32; background: #fff;}
+.un_formArea tr th { text-align: center;}
+.un_formArea tr td { vertical-align: middle;}
+.un_formArea tr td > input,
+.un_formArea tr td > textarea.formInput { width:100%; border: none;}
+.un_formArea tr td > input.formInput { height: 2.5em; font-size: 15px; padding: 0.5em;}
+.un_formArea tr td > textarea.formInput { height: 12em;}
+.un_formArea tr td.un_formCheckBlock { padding: 1em 0.5em;}
+.un_formArea tr td.un_formCheckBlock label { white-space: nowrap; display: inline-block;}
+.un_formArea tr td.un_formCheckBlock input[type="checkbox"] { margin-right: 0.3em;}
+#submitButton { font-weight: bold; font-family: "Georgia", "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho ProN", "HGS明朝E,メイリオ", Meiryo, serif; text-align: center; border: none; background: #c69c6d; display: block;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* ---------------------------------------------------------
+	　contact/index.html - PC Only
+	--------------------------------------------------------- */
+	.un_formArea tr th { width: 28%; border-right: none;}
+	.un_formArea tr td.un_formCheckBlock label { margin-left: 2em; }
+	#submitButton { width: 18vw; font-size: 22px; margin: 4vw auto 8vw; padding: 0.6vw 4.6vw; cursor: pointer; transition: opacity 0.3s;}
+	#submitButton:hover { opacity: 0.7;}
+	.un_contactArea .bl_linkBtn_brown { max-width: 560px; font-size: 20px; margin: 5vw auto 0;}
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* ---------------------------------------------------------
+	　contact/index.html - SP Only
+	--------------------------------------------------------- */
+	.un_formArea,
+	.un_formArea tbody,
+	.un_formArea tbody tr,
+	.un_formArea tbody tr th,
+	.un_formArea tbody tr td { width: 100%; display: block;}
+	.un_formArea tr th { margin-top: 1.5em; padding: 1.8% 3%; border-bottom: none;}
+	.un_formArea tr td.un_formCheckBlock label { display: block;}
+	#submitButton { width: 50%; font-size: 18px; margin: 9% auto 13%; padding: 2.5% 5%;}
+	.un_contactArea .bl_linkBtn_brown { font-size: 18px; margin-top: 10%;}
+
+} /* @media END */

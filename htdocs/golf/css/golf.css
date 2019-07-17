@@ -1,0 +1,284 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　rest/ 各宿泊先 - PC & SP
+--------------------------------------------------------- */
+/* 導入部分
+------------------------------------------ */
+.un_restIntro { background: 100% 100% / auto 100% no-repeat;}
+.un_restIntro .un_introTtl { font-size: 23px; color: #c69c6d;}
+.un_restIntro > p { margin-top: 0.8em;}
+
+/* 導入部分：コンドミニアム
+------------------------------------------ */
+.un_restIntro.un_introCond { background-image: url(../condominium/images/intro_cond.jpg);}
+
+/* 導入部分：アウラニリゾート
+------------------------------------------ */
+.un_restIntro.un_introAulani { background-image: url(../aulani/images/intro_aulani.jpg);}
+
+/* 導入部分：ラグジュアリーホテル
+------------------------------------------ */
+.un_restIntro.un_introHotel { background-image: url(../hotel/images/intro_hotel.jpg);}
+
+/* 導入部分：邸宅
+------------------------------------------ */
+.un_restIntro.un_introTeitaku { background-image: url(../teitaku/images/intro_tei.jpg);}
+
+/* 島選択
+------------------------------------------ */
+.un_restList { margin-top: 5vw; padding: 0 6vw;}
+.un_restList .bl_columnUnitArea .bl_columnOne { width: 100%;}
+.un_restList .bl_columnUnitArea .gold,.halfbox .gold { font-size: 30px;}
+.un_restList .bl_columnUnitArea .gold > span { font-size: 16px; vertical-align: top; margin: 0.5em 0 0 1em; display: inline-block;}
+.un_restList .bl_columnUnitArea p { margin-top: 0.8em;}
+.un_restList .bl_columnUnitArea .bl_linkBtn_brown { width: 60%; min-width: 300px; margin: 2vw 0 0 auto;}
+
+/* テキストエリア
+------------------------------------------ */
+.un_restInfo { color: #fff; background: #352E32;}
+.un_restInfo .un_infoTxt > p { margin-top: 1.5em;}
+
+
+/* ---------------------------------------------------------
+　rest/ ホテル選択 - PC & SP
+--------------------------------------------------------- */
+/* 導入部分
+------------------------------------------ */
+.un_introIland .bl_columnUnitArea { margin-top: 0; color: #fff; background: #6B645F;}
+.un_introIland .bl_columnUnitArea p { margin-top: 1.2em;}
+.un_introIland .bl_columnUnitArea p:first-of-type { margin-top: 0;}
+
+/* ホテル一覧
+------------------------------------------ */
+.un_hotelList > p { margin-top: 4em;}
+.un_hotelList .bl_columnUnitArea { flex-wrap: wrap; justify-content: flex-start;}
+.un_hotelList .bl_columnThird_one { color: #fff; text-align: center; background: #352E32;}
+.un_hotelList .bl_columnThird_one > a { color: #fff;}
+.un_hotelList .un_hotelTxt { padding: 0.8em;}
+.un_hotelList .un_hotelTxt > p { line-height: 1.4;}
+
+/* 他の島
+------------------------------------------ */
+.un_otherList .bl_columnHalf::after { content: ''; clear: both; display: block;}
+.un_otherList .bl_columnHalf > img { float: left;}
+.un_otherList .bl_columnHalf .un_otherTxt { float: right;}
+.un_otherList .bl_columnHalf .un_otherTxt > p { font-weight: bold; color: #c69c6d; letter-spacing: 0.1em; line-height: 1.2;}
+.un_otherList .bl_columnHalf .un_otherTxt > p > span { font-size: 0.6em; vertical-align: middle; margin-left: 0.5em;}
+
+
+/* ---------------------------------------------------------
+　rest/ ホテル詳細 - PC & SP
+--------------------------------------------------------- */
+/* 導入部分
+------------------------------------------ */
+.un_hotelInfoArea .bl_columnThird_two > p { margin-top: 1.2em;}
+.un_hotelInfoArea .bl_columnThird_one > img { margin-top: 1.2em;}
+.un_hotelInfoArea .bl_columnThird_one > img:first-of-type { margin-top: 0;}
+.un_hotelInfoArea .bl_photoGallery { margin-top: 5vw;}
+.un_hotelInfoArea .bl_photoGallery .bl_photoCurrent {}
+.un_hotelInfoArea .bl_photoGallery .bl_photoThumb {}
+.un_hotelInfoArea .un_hotelPrice { margin-top: 8vw;}
+.un_hotelInfoArea .un_hotelPrice > dl > dt:not(:first-of-type) { margin-top: 4em;}
+.un_hotelInfoArea .un_hotelPrice > dl > dd { line-height: 1.6; margin-top: 1.5em;}
+.un_hotelInfoArea .un_hotelPrice .bl_linkBtn_brown { width: 50%; max-width: 300px; font-size: 18px; margin: 5vw 0 0 auto;}
+.un_hotelInfoArea .un_hotelPrice .bl_linkBtn_brown > a { color: #c69c6d;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* ---------------------------------------------------------
+	　rest/ 各宿泊先 - PC Only
+	--------------------------------------------------------- */
+	/* 導入部分
+	------------------------------------------ */
+	.un_restIntro { min-height: 16vw; padding: 2vw 6vw; position: relative;}
+	.un_restIntro::before { content: ''; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0.6) 40%,rgba(255,255,255,0) 100%);}
+	.un_restIntro .un_introTtl,
+	.un_restIntro > p { position: relative; z-index: 1;}
+
+	/* 島選択
+	------------------------------------------ */
+	.un_restList .bl_columnUnitArea { margin-top: 5vw;}
+	.un_restList .bl_columnUnitArea .bl_linkBtn_brown { max-width: 420px;}
+
+	/* テキストエリア
+	------------------------------------------ */
+	.un_restInfo { /*margin-top: 5vw;*/ padding: 3.5vw 6vw; display: flex; align-items: center;}
+	.un_restInfo .un_infoHead { width: 53vw; margin-right: 4vw;}
+	.un_restInfo .un_infoTxt {}
+	.un_restInfo .un_infoTxt .gold { font-size: 18px;}
+	.un_restInfo .un_infoTxt > p { margin-top: 1.5em;}
+
+
+	/* ---------------------------------------------------------
+	　rest/ ホテル選択 - PC　Only
+	--------------------------------------------------------- */
+	/* 導入部分
+	------------------------------------------ */
+	.un_introIland .bl_columnUnitArea .bl_columnHalf { width: 50%;}
+	.un_introIland .bl_columnUnitArea .bl_columnHalf:nth-child(2) { padding: 1.5vw 2vw;}
+
+	/* ホテル一覧
+	------------------------------------------ */
+	.un_hotelList { margin-top: 5vw; padding: 0 6vw;}
+	.un_hotelList .bl_columnThird_one { margin: 1.5vw 0 0 1.5vw;}
+	.un_hotelList .bl_columnThird_one:nth-of-type(3n+1) { margin-left: 0;}
+	.un_hotelList .bl_columnThird_one:nth-of-type(-n+3) { margin-top: 0;}
+	.un_hotelList .un_hotelTxt .it_hotelName { font-size: 14px;}
+	.un_hotelList .un_hotelTxt .it_roomName { font-size: 18px;}
+
+	/* 他の島
+	------------------------------------------ */
+	.un_otherList { margin-top: 8vw; padding: 0 6vw;}
+	.un_otherList .un_otherTtl { font-size: 18px;}
+	.un_otherList .bl_columnHalf { width: calc(50% - 2vw);}
+	.un_otherList .bl_columnHalf > img { width: 35%;}
+	.un_otherList .bl_columnHalf .un_otherTxt { width: 60%;}
+	.un_otherList .bl_columnHalf .un_otherTxt > p { font-size: 30px;}
+	.un_otherList .bl_columnHalf .un_otherTxt .bl_linkBtn_brown { margin-top: 1em;}
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* ---------------------------------------------------------
+	　rest/ 各宿泊先 - SP Only
+	--------------------------------------------------------- */
+	/* 導入部分
+	------------------------------------------ */
+	.un_restIntro { height: auto; padding: 0 4vw 37vw; background-size: 100% auto;}
+	.un_restIntro .un_introTtl { font-size: 20px;}
+	.un_restIntro > p { margin-top: 0.5em;}
+
+	/* 島選択
+	------------------------------------------ */
+	.un_restList { margin-top: 20%; padding: 0 4vw;}
+	.un_restList .bl_columnUnitArea { margin-top: 12%;}
+	.un_restList .bl_columnUnitArea .bl_columnThird_one { width: 70%; margin: 0 auto;}
+	.un_restList .bl_columnUnitArea .bl_columnThird_two { text-align: center;}
+	.un_restList .bl_columnUnitArea .gold { font-size: 26px;}
+	.un_restList .bl_columnUnitArea .gold > span { font-size: 14px;}
+	.un_restList .bl_columnUnitArea p { margin-top: 1em;}
+	.un_restList .bl_columnUnitArea .bl_linkBtn_brown { width: 100%; min-width: 0; margin: 6% auto;}
+
+	/* テキストエリア
+	------------------------------------------ */
+	.un_restInfo { /*margin-top: 12%;*/ padding: 7% 4vw;}
+	.un_restInfo .un_infoHead { width: 65%; margin: 0 auto;}
+	.un_restInfo .un_infoTxt { margin-top: 8%;}
+	.un_restInfo .un_infoTxt .gold { font-size: 16px; text-align: center;}
+	.un_restInfo .un_infoTxt > p { margin-top: 1.5em;}
+
+
+	/* ---------------------------------------------------------
+	　rest/ ホテル選択 - SP　Only
+	--------------------------------------------------------- */
+	/* 導入部分
+	------------------------------------------ */
+	.un_introIland .bl_columnUnitArea .bl_columnHalf:nth-child(2) { text-align: center; padding: 4% 8% 8%;}
+
+	/* ホテル一覧
+	------------------------------------------ */
+	.un_hotelList { margin-top: 10%; padding: 0 4vw;}
+	.un_hotelList .bl_columnThird_one { width: calc((100% / 2) - 1.5%); margin: 3% 0 0 3%;}
+	.un_hotelList .bl_columnThird_one:nth-of-type(2n+1) { margin-left: 0;}
+	.un_hotelList .bl_columnThird_one:nth-of-type(-n+2) { margin-top: 0;}
+	.un_hotelList .un_hotelTxt .it_hotelName { font-size: 12px;}
+	.un_hotelList .un_hotelTxt .it_roomName { font-size: 15px;}
+
+	/* 他の島
+	------------------------------------------ */
+	.un_otherList { margin-top: 10%; padding: 0 4vw;}
+	.un_otherList .un_otherTtl { font-size: 15px;}
+	.un_otherList .bl_columnHalf > img { width: 22%;}
+	.un_otherList .bl_columnHalf .un_otherTxt { width: 75%;}
+	.un_otherList .bl_columnHalf .un_otherTxt > p { font-size: 20px;}
+	.un_otherList .bl_columnHalf .un_otherTxt .bl_linkBtn_brown { font-size: 12px; margin-top: 0.5em;}
+	.un_otherList .bl_columnHalf .un_otherTxt .bl_linkBtn_brown > a { letter-spacing: 0.08em;}
+
+
+	/* ---------------------------------------------------------
+	　rest/ ホテル詳細 - SP Only
+	--------------------------------------------------------- */
+	/* 導入部分
+	------------------------------------------ */
+	.un_hotelInfoArea .bl_columnThird_one { display: none;}
+	.un_hotelInfoArea .bl_photoGallery { margin-top: 10%;}
+	.un_hotelInfoArea .un_hotelPrice { margin-top: 6%;}
+	.un_hotelInfoArea .un_hotelPrice > dl > dd { margin-top: 1.2em;}
+	.un_hotelInfoArea .un_hotelPrice .bl_linkBtn_brown { width: 100%; max-width: none; margin: 10% auto 0;}
+
+} /* @media END */
+
+
+
+/* 1013css**/
+.un_restInfo {color: #fff;background: #352E32;}
+.un_secTtl { font-size: 26px; text-align: center; letter-spacing: 0.2em; color: #c69c6d; width: 100%;}
+
+.gold a{
+    color: #C69C6D;
+}
+
+@media screen and (max-width: 750px) {
+	.un_secTtl {font-size: 18px;}
+}
+
+
+.un_topTxt {
+    height: 14vw;
+    letter-spacing: 0.5em;
+    padding: 4vw 6vw 0;
+    color: #fff;
+    line-height: 1.6;
+    background: url(../images/contact_golf.jpg) 0 0 / 100% auto no-repeat;
+}
+
+.un_topTxt .un_topCatch01 {
+    font-size: 3.4vw;
+	text-align: right;
+}
+
+	/* ---------------------------------------------------------
+	　Golf/ 島css
+	--------------------------------------------------------- */
+
+.flexbox{
+	display: flex;
+	justify-content: space-between;
+	align-items: top;
+	flex-wrap: wrap;
+}
+
+.halfbox{
+	width: 48%;
+	margin-bottom: 5vw;
+}
+
+p.bottom_boder{
+	border-bottom: 1px solid #352E32;
+}
+
+.bl_columnUnitArea {flex-wrap: wrap;}
+
+.bib40{margin-bottom: 40px}
+
+.bl_indentList_1em p{
+	margin-bottom: 20px;
+}
+	
+@media screen and (max-width: 750px) {
+	.un_restList .bl_columnUnitArea .bl_columnThird_two .spleft{
+		text-align: left;
+	}
+	
+.halfbox{
+	width: 100%;
+    margin-bottom: 20%;
+	text-align: left;
+	}
+}

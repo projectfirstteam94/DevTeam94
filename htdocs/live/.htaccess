@@ -1,0 +1,14 @@
+#更新2018-09-04
+#ベーシック認証
+<Files ~ "^\.(htaccess|htpasswd)$">
+  deny from all
+</Files>
+AuthUserFile /home/aquamouse7/www/hawaiiansky/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please enter your ID and password"
+AuthType Basic
+order deny,allow
+
+<Files ~ "^(liveEdit\.php|liveEditChk\.php|liveAdd\.php|liveAddChk\.php)$">
+  require valid-user
+</Files>

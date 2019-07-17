@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　manage/index.php - PC & SP
+--------------------------------------------------------- */
+#contactMailManage .barLine {
+	letter-spacing: 0;
+	padding: 0.6vw 1.6vw 0.6vw 0.6vw;
+}
+
+/* お問い合わせメール：一覧
+------------------------------------------ */
+.un_contactMail { padding-bottom: 4vw; border-bottom: 1px dashed #ccc; }
+.un_contactMail:first-of-type { padding-top: 0; border-top: none;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* お問い合わせメール：一覧
+	------------------------------------------ */
+	.un_contactMail { width: 100%; margin-top: 5vw; }
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* お問い合わせメール：一覧
+	------------------------------------------ */
+	.un_contactMail { margin-top: 12%; display: flex; flex-flow: column;}
+	.un_contactMail .un_contactMailBlock_head { order: 0;}
+	.un_contactMail .un_contactMailBlock_txt { order: 2;}
+} /* @media END */

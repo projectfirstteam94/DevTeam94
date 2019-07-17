@@ -1,0 +1,57 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　shigeru/index.html - PC & SP
+--------------------------------------------------------- */
+/* ポレポレツアー：一覧
+------------------------------------------ */
+.un_introTxt { margin-top: 2.5vw;}
+.un_introTxt > p { margin-top: 1.8vw;}
+
+.un_tourInfo { margin-top: 5vw;}
+.un_tourInfo .bl_columnUnitArea { position: relative;}
+.un_tourInfo .bl_columnUnitArea .bl_columnThird_two { padding-bottom: 5.5vw;}
+.un_tourInfo .bl_columnUnitArea .bl_columnThird_two > h3 { font-size: 24px;}
+.un_tourInfo .bl_columnUnitArea .bl_columnThird_two > p { margin-top: 1.5vw;}
+.un_tourInfo .bl_columnUnitArea .bl_columnThird_two .bl_linkBtn_brown { width: 30vw; position: absolute; bottom: 0; right: 0;}
+
+/* その他のオプショナルツアー
+------------------------------------------ */
+.un_otherTour { margin-top: 10vw;}
+.un_otherTour > p { margin-top: 1.2em;}
+.un_otherTour .bl_columnUnitArea .bl_columnFourth_one .un_tourTtl { min-height: 50px; border-bottom: 1px solid #000; margin-top: 1.5vw; padding-bottom: 1vw;}
+.un_otherTour .bl_columnUnitArea .bl_columnFourth_one .un_tourTxt { margin-top: 1vw;}
+.un_otherTour .bl_columnUnitArea .bl_columnFourth_one .un_tourTxt > p { line-height: 1.4;}
+.un_otherTour .un_tourNote { margin-top: 4vw;}
+.un_otherTour .bl_linkBtn_brown { width: 30vw; margin: 4vw 0 0 auto;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* ポレポレツアー：一覧
+	------------------------------------------ */
+	.un_introTxt { margin-top: 6%;}
+
+	.un_tourInfo { margin-top: 12%;}
+	.un_tourInfo .bl_columnUnitArea .bl_columnThird_one { width: 85%; margin: 0 auto;}
+	.un_tourInfo .bl_columnUnitArea .bl_columnThird_two { margin-top: 5%; padding-bottom: 0;}
+	.un_tourInfo .bl_columnUnitArea .bl_columnThird_two > h3 { font-size: 20px;}
+	.un_tourInfo .bl_columnUnitArea .bl_columnThird_two > p { margin-top: 1.5vw;}
+	.un_tourInfo .bl_columnUnitArea .bl_columnThird_two .bl_linkBtn_brown { width: 75%; margin: 6% auto 0; position: static;}
+
+	/* その他のオプショナルツアー
+	------------------------------------------ */
+	.un_otherTour { margin-top: 22%;}
+	.un_otherTour .bl_columnUnitArea .bl_columnFourth_one .un_tourTtl { margin-top: 6%; padding-bottom: 6%;}
+	.un_otherTour .bl_columnUnitArea .bl_columnFourth_one .un_tourTxt { margin-top: 6%;}
+	.un_otherTour .un_tourNote { margin-top: 12%;}
+	.un_otherTour .bl_linkBtn_brown { width: 75%; margin: 9% auto 0;}
+
+} /* @media END */

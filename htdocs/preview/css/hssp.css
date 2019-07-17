@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* スマホ向け*/
+/*
+@media screen and (max-width: 480px) {
+
+#head_logo img{
+	width:25vw;
+	left:2vw;
+	}
+#head_telpc{
+	display:none;
+}
+
+#head_telsp{
+	display:block;
+}
+
+#head_telsp img{
+	display:block;
+	width:65vw;
+	position:absolute;
+	top:2vw;
+	left:30vw;
+}
+
+#head_pcmenu{
+	display:none;
+}
+
+.flexslider {
+  top:23vw;
+}
+
+.flex-control-nav li {
+  margin: 0  2vw;
+}
+
+#top{
+	margin-bottom:30vw;
+}
+
+.mainContent{
+	padding:0 4vw;
+	margin: 0;
+}
+
+.mainContent h3, .mainContent2 h3{
+	letter-spacing:0.2em;
+	font-size:5vw;
+	margin:0;
+}
+
+.mainContent p, .mainContent2 p{
+	letter-spacing:0.2em;
+	font-size:3vw;
+}
+
+.content40, .content50, .content60{
+	width:90vw;
+	display:block;
+	margin:0;
+	text-align:center
+	}
+	
+.content60 img{
+	width:28vw;
+	}
+
+.newinfo h4, .recommend h4{
+	width:90vw;
+}
+
+.recommendL{
+	width:30vw;
+}
+.recommendR, .recommend p{
+	width:59vw;
+}
+
+.recommend img{
+	width:12vw;
+	display:inline-table;
+}
+
+}
+*/

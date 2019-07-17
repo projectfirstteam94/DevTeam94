@@ -1,0 +1,673 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------------- TOP Style - PC & SP --------------------------------------------------------------------------*/
+
+.un_bestRestArea,
+.un_introArea,
+.un_nwesArea,
+.un_restArea,
+.un_shigeruTour,
+.un_photoArea {
+    padding: 0 6vw;
+}
+
+.un_secTtl {
+    font-size: 26px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #c69c6d;
+}
+
+.un_moreLink {
+    text-align: right;
+    margin-top: 2em;
+}
+
+
+/* TOP：テキスト
+------------------------------------------------ */
+/*.un_topVisualText {
+    /*position: relative;
+}*/
+/*.un_topVisualText > div {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #352e3299;
+}*/
+.un_topVisualText > div > p {
+    color: #a96513;
+    text-align: center;
+    letter-spacing: 0.15vw;
+}
+
+.un_topVisualText > div > p > span {
+    font-size: 1.2vw;
+}
+
+/* TOP：おすすめコンドミニアム・おすすめの邸宅
+------------------------------------------------ */
+.un_bestRestArea {
+    margin-top: 2.5vw;
+}
+.un_bestRestArea .un_columns {
+	width: 100%;
+	display: flex;
+	display: -ms-flexbox;
+	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+}
+.un_bestRestArea .un_columns > .un_column {
+	width: 50%;
+}
+.un_bestRestArea .un_columns > .un_column:first-child {
+	padding-right: 1%;
+}
+.un_bestRestArea .un_columns > .un_column:last-child {
+	padding-left: 1%;
+}
+.un_bestRestArea .un_barLine {
+    font-size: 23px;
+    letter-spacing: 0.2em;
+    color: #ccc2b6;
+    padding: 1.2vw 1.6vw;
+    background: #352e32;
+    text-align: center;
+}
+.un_bestRestArea .un_leftRightLine {
+    display: flex;
+    align-items: center;
+    margin-top: 6vw;
+}
+.un_bestRestArea .un_leftRightLine:first-of-type {
+    margin-top: 2vw;
+}
+.un_bestRestArea .un_leftRightLine > div {
+    text-align: center;
+}
+.un_bestRestArea .un_leftRightLine:before,
+.un_bestRestArea .un_leftRightLine:after {
+    border-top: 1px solid;
+    content: "";
+    flex-grow: 1;
+}
+.un_bestRestArea .un_leftRightLine:before {
+    margin-right: 1rem;
+}
+.un_bestRestArea .un_leftRightLine:after {
+    margin-left: 1rem;
+}
+.un_bestRestArea .bl_columnUnitArea {
+    margin-top: 0;
+}
+.un_bestRestArea .bl_columnHalf {
+    margin-top: 1vw;
+}
+.un_bestRestArea .un_bestRest {
+    border: solid 1px #c69c6d;
+}
+.un_bestRestArea .un_roomName {
+    height: 54px;
+    background-color: #c69c6d;
+    color: #fff;
+    text-align: center;
+}
+.un_bestRestArea .un_roomName {
+    position: relative;
+}
+.un_bestRestArea .un_roomName > p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    line-height: 1.3em;
+}
+.un_bestRestArea .un_roomType {
+    height: 7.0vw;
+    background-color: #fff;
+    text-align: center;
+    font-size: 1.4vw;
+    padding-top: 1vw;
+}
+
+.un_roomType > p{
+    line-height: 1.3em;
+}
+
+/* TOP：導入部分
+------------------------------------------------ */
+.un_introArea {
+    margin-top: 8vw;
+}
+
+.un_introArea .un_introLead {
+    font-size: 2.2vw;
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+}
+
+.un_introArea .un_introImg {
+    font-size: 0;
+}
+
+.un_introArea .un_introImg > img {
+    width: calc((100% / 3) - 0.5vw);
+    margin-left: 0.5vw;
+    display: inline-block;
+}
+
+.un_introArea .un_introImg > img:first-of-type {
+    margin-left: 0;
+}
+
+/* TOP：ニュースエリア
+------------------------------------------------ */
+.un_nwesArea {
+    margin-top: 0;
+}
+.un_nwesArea .un_sectionLine2 {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+.un_nwesArea .un_sectionLine2:before {
+    content: '';
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 3px solid black;
+    border-bottom: 1px solid black;
+}
+.un_nwesArea .un_sectionLine2::after {
+    content: '';
+    width: 100%;
+    height: 7px;
+    position: absolute;
+    left: 0; bottom: 0;
+    border-top: 1px solid black;
+    border-bottom: 3px solid black;
+}
+.un_nwesArea h2 {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: translate(0, -50%);
+    color: #FD7D2C;
+    font-size: 2.0vw;
+}
+
+.un_nwesArea .bl_columnThird_two {
+    margin: 4px 0;
+}
+
+.un_nwesArea ul.un_newsList > li {
+    padding: 0.7em 0;
+    border-bottom: 1px solid #000;
+}
+
+.un_nwesArea ul.un_newsList > li:last-child {
+    border-bottom: none;
+}
+
+.un_nwesArea ul.un_newsList > li > a {
+    padding-left: 6.5em;
+    position: relative;
+    display: inline-block;
+}
+
+.un_nwesArea ul.un_newsList > li > a > span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* TOP：お勧め宿泊施設エリア
+------------------------------------------------ */
+.un_restArea {
+    margin-top: 7vw;
+}
+.un_restArea .bl_columnUnitArea {
+    margin-top: 0;
+}
+.un_restArea .bl_columnHalf {
+    width: calc(50% - 3.5vw);
+}
+
+.un_restArea .un_restList .un_restBox {
+    /* margin-top: 1.8vw; */
+    padding-top: 1.8vw;
+}
+
+.un_restArea .un_restList .un_restBox::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.un_restArea .un_restList .un_restBox .un_restImg {
+    width: 30%;
+    float: left;
+    margin-right: 1vw;
+}
+
+.un_restArea .un_restList .un_restBox .un_restTxt .un_restTtl {
+    color: #FD7D2C;
+}
+
+.un_restArea .un_restList .un_restBox .un_restTxt > p {
+    line-height: 1.4;
+    margin-top: 0.5em;
+}
+
+.un_restArea .un_restList .un_restBox .un_restTxt .un_moreLink {
+    margin-top: 0.5em;
+}
+
+/* TOP：お問い合わせについて
+------------------------------------------------ */
+
+.un_contactInfo {
+    color: #fff;
+    text-align: center;
+    margin-top: 4vw;
+    padding: 3vw 6vw;
+    background: #c69c6d;
+}
+
+.un_contactInfo .un_secTtl {
+    color: #352E32;
+}
+
+.un_contactInfo > p {
+    letter-spacing: 0.2em;
+    margin-top: 1em;
+}
+
+.un_contactInfo .bl_linkBtn_brown {
+    max-width: 300px;
+    margin: 2vw auto 0;
+}
+
+.un_contactInfo .bl_linkBtn_brown > a {
+    color: #c69c6d;
+}
+
+/* TOP：宿泊先を探す
+------------------------------------------------ */
+
+.un_restInfo {
+    color: #fff;
+    background: #352E32;
+}
+
+.un_restInfo .un_infoHead > h2 {
+    color: #c69c6d;
+}
+
+.un_restInfo .un_restList .un_restItem {
+    position: relative;
+    cursor: pointer;
+}
+
+.un_restInfo .un_restList .un_restItem > a {
+    color: #fff;
+}
+
+.un_restInfo .un_restList .un_restItem::after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.un_restInfo .un_restList .un_restItem dl.un_restOverlay {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.un_restInfo .un_restList .un_restItem dl.un_restOverlay > dt > img {
+    width: auto;
+    margin: 0 auto;
+}
+
+/* TOP：シゲルと行くポレポレツアー
+------------------------------------------ */
+
+.un_shigeruTour {
+    margin-top: 6vw;
+}
+
+.un_shigeruTour .un_tourTtl {
+    text-align: center;
+    border-bottom: 1px solid #000;
+    margin-top: 1.5vw;
+    padding-bottom: 1vw;
+}
+
+.un_shigeruTour .un_tourTxt {
+    margin-top: 1vw;
+}
+
+.un_shigeruTour .un_tourTxt > p {
+    line-height: 1.4;
+}
+
+/* TOP：ハワイの景色
+------------------------------------------------ */
+
+.un_photoArea .un_photoList {
+    margin-top: 2vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.un_photoArea .un_photoList > figure {
+    width: calc((100% - 3vw) / 4);
+    margin: 1vw 0 0 1vw;
+}
+
+/*-------------------------------------------------------------------------- TOP Style - PC Only --------------------------------------------------------------------------*/
+
+@media screen and (min-width: 751px) {
+    /*-------------------------------------------------------------------------- TOP Style - PC Only --------------------------------------------------------------------------*/
+    /* TOP：スライダー ------------------------------------------------ */
+    ul#slidershow {
+        /* jQuery処理前に画像が縦並びに表示されないための対応 */
+        display:none;
+    }
+    .ly_topVisual {
+        /* height: calc(100vh - 6.2vw); 指定削除 */
+        /* height: 50vw; */
+        overflow: hidden;
+    }
+    .ly_topVisual img {
+        /* height: calc(100vh - 6.2vw); 指定削除 */
+        width: 100%;
+    }
+    /* TOP：テキスト ------------------------------------------------ */
+    .un_topVisualText > div > p {
+        font-size: 1.8vw;
+        line-height: 2.7vw;
+        padding: 1.3vw 0;
+    }
+    /* TOP：宿泊先を探す ------------------------------------------------ */
+    .un_restInfo {
+        padding: 3vw 6vw;
+    }
+    .un_restInfo .un_infoHead {
+        width: 600px;
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    .un_restInfo .un_infoHead > h2 {
+        width: 40%;
+    }
+    .un_restInfo .un_infoHead > p {
+        width: 60%;
+    }
+    .un_restInfo .un_restList {
+        margin-top: 3vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+        flex-flow: row wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+    .un_restInfo .un_restList .un_restItem {
+        width: calc(50% - 1vw);
+        margin-top: 2vw;
+    }
+    .un_restInfo .un_restList .un_restItem:nth-of-type(-n+2) {
+        margin-top: 0;
+    }
+    .un_restInfo .un_restList .un_restItem::after {
+        width: 200px;
+        pointer-events: none;
+    }
+    .un_restInfo .un_restList .un_restItem > a {
+        color: #fff;
+    }
+    .un_restInfo .un_restList .un_restItem dl.un_restOverlay {
+        width: 200px;
+        padding: 0 10px;
+        font-size: 12px;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .un_restInfo .un_restList .un_restItem dl.un_restOverlay > dt > img {
+        height: 56px;
+    }
+    .un_restInfo .un_restList .un_restItem dl.un_restOverlay > dd {
+        height: 0;
+        line-height: 1.6;
+        overflow: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .un_restInfo .un_restList .un_restItem:hover dl.un_restOverlay > dd {
+        height: 60px;
+        margin-top: 0.5em;
+        opacity: 1;
+        overflow: visible;
+    }
+    /* TOP：ハワイの景色 ------------------------------------------ */
+    .un_photoArea {
+        margin-top: 6vw;
+    }
+    .un_photoArea .un_photoList > figure:nth-of-type(4n+1) {
+        margin-left: 0;
+    }
+}
+
+/* @media END */
+
+/*-------------------------------------------------------------------------- TOP Style - SP Only --------------------------------------------------------------------------*/
+
+@media screen and (max-width: 750px) {
+    /*-------------------------------------------------------------------------- TOP Style - SP Only --------------------------------------------------------------------------*/
+    .un_bestRestArea,
+    .un_introArea,
+    .un_nwesArea,
+    .un_restArea,
+    .un_shigeruTour,
+    .un_photoArea {
+        padding: 0 4vw;
+    }
+    .un_secTtl {
+        font-size: 24px;
+    }
+    /* TOP：スライダー ------------------------------------------------ */
+    ul#slidershow {
+        /* jQuery処理前に画像が縦並びに表示されないための対応 */
+        display:none;
+    }
+    .ly_topVisual {
+        /* height: 50vw; */
+        overflow: hidden;
+    }
+    .ly_topVisual img {
+        width: 100%;
+    }
+    .bl_topImg {
+        height: calc(100vh - 24.8vw);
+    }
+    /* TOP：テキスト ------------------------------------------------ */
+    .un_topVisualText > div > p {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 4vw 0 2vw;
+    }
+
+    /* TOP：おすすめコンドミニアム・おすすめの邸宅 --------------------- */
+    .un_bestRestArea .un_barLine {
+        font-size: 20px;
+    }
+    .un_bestRestArea .bl_columnUnitArea {
+        margin-top: 2.5vw;
+    }
+    .un_bestRestArea .bl_columnHalf {
+        margin-top: 2.5vw;
+    }
+    .un_bestRestArea .un_roomType {
+        height: auto;
+        padding-bottom: 2px;
+    }
+    .un_bestRestArea p {
+        font-size: 14px;
+    }
+
+    /* TOP：導入部分 ------------------------------------------------ */
+    .un_introArea {
+        text-align: center;
+    }
+    .un_introArea .un_introLead {
+        font-size: 18px;
+        margin-bottom: 1em;
+    }
+    /* TOP：ニュースエリア ------------------------------------------------ */
+    .un_nwesArea {
+        margin-top: 0;
+    }
+    .un_nwesArea h2 {
+        font-size: 18px;
+        text-align: left;
+    }
+    .un_nwesArea .un_sectionLine2::before {
+        height: 5px;
+        border-top-width: 2px;
+    }
+    .un_nwesArea .un_sectionLine2::after {
+        height: 5px;
+        border-bottom-width: 2px;
+    }
+    .un_nwesArea .bl_columnThird_one {
+        width: 100%;
+        height: 40px;
+    }
+    .un_nwesArea .bl_columnThird_two {
+        margin-top: 0;
+    }
+    /* TOP：おすすめ宿泊施設エリア ------------------------------------------------ */
+    .un_restArea {
+        margin-top: 12%;
+    }
+    .un_restArea .bl_columnHalf {
+        width: 100%;
+        margin-top: 0;
+    }
+    /* .un_restArea .bl_columnHalf:nth-of-type(2) {
+        margin-top: 10%;
+    } */
+    .un_restArea .un_restList .un_restBox {
+        margin-top: 3%;
+        padding-top: 3%;
+        border-top: 1px solid #000;
+    }
+    .un_restArea .bl_columnHalf:first-of-type .un_restList .un_restBox {
+        margin-top: 0;
+        border-top: none;
+    }
+    .un_restArea .un_restList .un_restBox .un_restImg {
+        width: 30%;
+        margin-right: 3%;
+    }
+
+    /* TOP：お問い合わせについて ------------------------------------------------ */
+    .un_contactInfo {
+        margin-top: 4%;
+        padding: 10% 4vw;
+    }
+    .un_contactInfo > p {
+        text-align: left;
+        margin-top: 1.5em;
+    }
+    .un_contactInfo .bl_linkBtn_brown {
+        width: 80%;
+        margin-top: 8%;
+    }
+    /* TOP：宿泊先を探す ------------------------------------------------ */
+    .un_restInfo {
+        padding: 10% 4vw;
+    }
+    .un_restInfo .un_infoHead {
+        text-align: center;
+    }
+    .un_restInfo .un_infoHead > h2 {
+        font-size: 22px;
+    }
+    .un_restInfo .un_infoHead > p {
+        margin-top: 6%;
+    }
+    .un_restInfo .un_restList {
+        margin-top: 8%;
+    }
+    .un_restInfo .un_restList .un_restItem {
+        width: 100%;
+        margin-top: 4%;
+    }
+    .un_restInfo .un_restList .un_restItem::after {
+        width: 47%;
+    }
+    .un_restInfo .un_restList .un_restItem dl.un_restOverlay {
+        width: 47%;
+    }
+    .un_restInfo .un_restList .un_restItem dl.un_restOverlay > dt > img {
+        height: 44px;
+    }
+    .un_restInfo .un_restList .un_restItem dl.un_restOverlay > dd {
+        display: none;
+    }
+    /* TOP：シゲルと行くポレポレツアー ------------------------------------------ */
+    .un_shigeruTour {
+        margin-top: 12%;
+    }
+    .un_shigeruTour .un_tourTtl {
+        margin-top: 6%;
+        padding-bottom: 6%;
+    }
+    .un_shigeruTour .un_tourTxt {
+        margin-top: 6%;
+    }
+    /* TOP：ハワイの景色 ------------------------------------------ */
+    .un_photoArea {
+        margin-top: 14%;
+    }
+    .un_photoArea .un_photoList {
+        margin-top: 3%;
+    }
+    .un_photoArea .un_photoList > figure {
+        width: calc((100% - 6%) / 2);
+        margin: 3% 0 0 3%;
+    }
+    .un_photoArea .un_photoList > figure:nth-of-type(2n+1) {
+        margin-left: 0;
+    }
+}
+
+/* @media END */

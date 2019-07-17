@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* -------------------------- */
+/* ▼メインメニュー項目の装飾 */
+/* -------------------------- */
+ul.ddmenu li {
+   display: inline-block;  /* ★1:横並びに配置する */
+   list-style-type: none;  /* ★2:リストの先頭記号を消す */
+   position: relative;     /* ★3:サブメニュー表示の基準位置にする */
+   top:2vw;
+}
+ul.ddmenu a {
+	background: transparent; /* メニュー項目の背景色 */
+	color: white;              /* メニュー項目の文字色 */
+	line-height: 10px;         /* メニュー項目のリンクの高さ(40px) */
+	text-align: center;        /* メインメニューの文字列の配置(中央寄せ) */
+	text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+	font-weight: bold;         /* 太字にする */
+	display: block;            /* ★4:項目内全域をリンク可能にする */
+}
+
+/* -------------------- */
+/* ▼サブメニューの装飾 */
+/* -------------------- */
+ul.ddmenu li ul {
+	display: none;       /* ★1:標準では非表示にする */
+	margin:0;         /* ★2:サブメニュー外側の余白(ゼロ) */
+	padding: 0;        /* ★3:サブメニュー内側の余白(ゼロ) */
+	position: absolute;  /* ★4:絶対配置にする */
+	z-index: 999;
+	top:100%;
+	left:0;
+	line-height:1px;
+	width:20vw;
+}
+
+ul.ddmenu li ul li{
+	margin:2% 4% 0% 4%;
+	width: 92%;
+}
+
+/* ---------------------------------- */
+/* ▼サブメニューがある場合に開く処理 */   /* ※サブメニューが1階層しか存在しない場合の記述 */
+/* ---------------------------------- */
+ul.ddmenu li:hover ul {
+   display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
+}
+
+/* ------------------------ */
+/* ▼サブメニュー項目の装飾 */
+/* ------------------------ */
+ul.ddmenu ul li:hover ul {   display: block;   }
+
+ul.ddmenu ul li {   /* ※A */
+	background-color: grey;
+	color:white;
+	list-style-type:none;
+	font-size:1.3vw;
+	width: 100%;               /* サブメニュー1項目の横幅 */
+	padding:0.5em 0;
+	border: 1px solid #999; /* 項目の枠線 */
+	/*border-radius: 6px;
+}
+	
+ul.ddmenu ul li a {   /* ※B */
+	color:#666;
+	line-height: 24px;   /* サブメニュー1項目の高さ(24px) */
+	padding-left: 0%;   /* 文字列前方の余白 */
+	font-weight: normal; /* 太字にはしない */
+}
+ul.ddmenu ul li a:hover {   /* ※C */
+	/*background-color: rgba( 255, 255, 255, 0.7 ); /* サブメニュー項目にマウスが載ったときの背景色 */
+	color: #000;  
+	border: 0px solid #333; /* 項目の枠線 */
+	border-radius: 6px;
+}
+

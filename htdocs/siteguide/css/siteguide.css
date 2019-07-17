@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+	/siteguide/ - PC & SP
+--------------------------------------------------------- */
+/* ディレクトリ内共通：リンクボタン
+------------------------------------------ */
+.bl_linkBtn_beige { margin-top: 2vw;}
+.bl_linkBtn_beige > a { font-size: 2.2vw; font-weight: bold;}
+
+
+/* ---------------------------------------------------------
+	/siteguide/about.html - PC & SP
+--------------------------------------------------------- */
+/* イントロ
+------------------------------------------ */
+.un_aboutIntro .bl_columnThird_one { line-height: 1.6;}
+.un_aboutIntro .un_aboutLead { color: #FD7D2C;}
+
+/* ご提供サービス
+------------------------------------------ */
+.un_aboutService .un_serviceList { border-top: 1px solid #000;}
+.un_aboutService .un_serviceList:first-of-type { margin-top: 0; padding-top: 0; border: none;}
+.un_aboutService .un_serviceList > dt { text-align: center;}
+.un_aboutService .un_serviceList > dt > ruby { line-height: 1.4;}
+.un_aboutService .un_serviceList > dt > ruby rt { font-size: 0.4em; text-align: center;}
+.un_aboutService .un_serviceList > dd {}
+.un_aboutService .un_serviceList > dd > p {}
+.un_aboutService .un_serviceList > dd > .un_moreLink { font-size: 0.9em; text-align: right;}
+
+.un_aboutContact .un_contactTtl { text-align: center;}
+.un_aboutContact .un_contactTtl > ruby > rt { text-align: center;}
+.un_aboutContact p { text-align: center;}
+.un_aboutContact .largeTel { line-height: 1.2;}
+
+
+/* ---------------------------------------------------------
+	/siteguide/how2contact.html - PC & SP
+--------------------------------------------------------- */
+/* お問い合わせ・お申し込み方法
+------------------------------------------ */
+.un_how2contactArea .un_introTxt { margin-top: 3vw;}
+.un_how2contactArea .how2img { width:24vw; margin:0.5vw auto 0;}
+.un_how2contactArea .largeTel2 { font-size: 5.4vw; line-height: 1.2; text-align:center; font-weight:lighter;}
+.un_how2contactArea .largeTel2 > a { color:#c69c6d;}
+.un_how2contactArea .how2P { color:#c69c6d; margin:1vw 0;}
+
+
+/* ---------------------------------------------------------
+	/siteguide/payment.html - PC & SP
+--------------------------------------------------------- */
+/* お支払い方法／キャンセルについて
+------------------------------------------ */
+.un_paymentData > p { margin-top: 0.8em;}
+.un_paymentData > table { width: 100%;}
+.un_paymentData > table td { line-height: 1.6; border:solid 1px #352E32;}
+.un_paymentData > table .un_tblHead { text-align:center; color: #fff; background: #6B645F; border:solid 1px #352E32;}
+.un_paymentData > table .un_payArrow { padding: 0; border:none;}
+.un_paymentData > table .un_payArrow::before { content: '';width: 0; height: 0; border-style: solid; border-color: #352e32 transparent transparent transparent; margin: 0 auto; display: block;}
+.un_paymentCancel > dl > dt { margin-top: 1.8em;}
+.un_paymentCancel > dl > dt::before { content: '●'; margin-right: 0.3em; display: inline-block;}
+.un_paymentCancel > dl > dd { padding-left: 1.8em;}
+.un_paymentCancel > dl > dd > p { margin-top: 1em;}
+.un_paymentCancel > dl > dd > p:first-of-type { margin-top: 0;}
+
+
+/* ---------------------------------------------------------
+/siteguide/sitemap.html - PC & SP
+--------------------------------------------------------- */
+/* サイトマップ
+------------------------------------------ */
+ul.un_sitemapList { margin-top: 3vw;}
+ul.un_sitemapList li { margin-top: 0.5em;}
+ul.un_sitemapList > li::before { content: '■'; margin-right: 0.2em; display: inline-block;}
+ul.un_sitemapList li .un_sitemap_child { margin-left: 1em;}
+ul.un_sitemapList li .un_sitemap_child li::before { content: '┣'; margin-right: 0.2em; display: inline-block;}
+ul.un_sitemapList li .un_sitemap_child li:last-of-type::before { content: '┗';}
+
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+	/* ---------------------------------------------------------
+		/siteguide/about.html - PC Only
+	--------------------------------------------------------- */
+	/* イントロ
+	------------------------------------------ */
+	.un_aboutIntro .bl_columnUnitArea { margin-top: 3vw; align-items: center;}
+	.un_aboutIntro .bl_columnThird_one { font-size: 2.2vw;}
+	.un_aboutIntro .un_aboutLead { font-size: 18px; margin-top: 5vw;}
+	.un_aboutIntro > p { margin-top: 3vw;}
+
+	/* ご提供サービス
+	------------------------------------------ */
+	.bl_contTtl_wide { margin-top: 6vw;}
+	.un_aboutService { margin-top: 4vw;}
+	.un_aboutService .un_serviceList { margin-top: 3vw; padding-top: 3vw; display: flex;}
+	.un_aboutService .un_serviceList > dt { width: 220px; margin-top: 1vw;}
+	.un_aboutService .un_serviceList > dt > ruby { font-size: 28px;}
+	.un_aboutService .un_serviceList > dd { width: calc(100% - 220px);}
+	.un_aboutService .un_serviceList > dd > p {}
+
+	.un_aboutContact { margin-top: 6vw;}
+	.un_aboutContact .un_contactTtl { font-size: 28px;}
+	.un_aboutContact p { margin-top: 1vw;}
+	.un_aboutContact .largeTel { font-size: 4vw;}
+
+
+	/* ---------------------------------------------------------
+		/siteguide/payment.html - PC Only
+	--------------------------------------------------------- */
+	/* お支払い方法／キャンセルについて
+	------------------------------------------ */
+	.un_paymentData > .barLine { margin-top: 3vw;}
+	.un_paymentData > .barLine:nth-of-type(n+2) { margin-top: 6vw;}
+	.un_paymentData > table { margin-top: 2vw;}
+	.un_paymentData > table td { padding: 1.2vw 2vw;}
+	.un_paymentData > table .un_tblHead { width: 18%;}
+	.un_paymentData > table .un_payArrow { height: 5vw;}
+	.un_paymentData > table .un_payArrow::before { border-width: 1.5vw 5vw 0 5vw;}
+	.un_paymentCancel { margin-top: 2vw;}
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* ---------------------------------------------------------
+		/siteguide/ - SP Only
+	--------------------------------------------------------- */
+	/* ディレクトリ内共通：リンクボタン
+	------------------------------------------ */
+	.bl_linkBtn_beige { margin-top: 6%;}
+	.bl_linkBtn_beige > a { font-size: 18px;}
+
+	/* ---------------------------------------------------------
+		/siteguide/about.html - SP Only
+	--------------------------------------------------------- */
+	/* イントロ
+	------------------------------------------ */
+	.un_aboutIntro .bl_columnUnitArea { margin-top: 4%;}
+	.un_aboutIntro .bl_columnThird_one { font-size: 16px; text-align: center;}
+	.un_aboutIntro > p { margin-top: 3vw;}
+	.un_aboutIntro .un_aboutLead { font-size: 17px; margin-top: 8%;}
+
+	/* ご提供サービス
+	------------------------------------------ */
+	.bl_contTtl_wide { margin-top: 9%;}
+	.un_aboutService { margin-top: 7%;}
+	.un_aboutService .un_serviceList { margin-top: 9%; padding-top: 9%;}
+	.un_aboutService .un_serviceList > dt > ruby { font-size: 24px;}
+	.un_aboutService .un_serviceList > dd {}
+	.un_aboutService .un_serviceList > dd > p { margin-top: 5%;}
+
+	.un_aboutContact { margin-top: 12%;}
+	.un_aboutContact .un_contactTtl { font-size: 24px;}
+	.un_aboutContact p { margin-top: 3%;}
+	.un_aboutContact .largeTel { font-size: 24px;}
+
+
+	/* ---------------------------------------------------------
+		/siteguide/how2contact.html - SP Only
+	--------------------------------------------------------- */
+	/* お問い合わせ・お申し込み方法
+	------------------------------------------ */
+	.un_how2contactArea .un_introTxt { margin-top: 6vw;}
+	.un_how2contactArea .how2img { width: 60%;}
+	.un_how2contactArea .largeTel2 { font-size: 11.5vw;}
+	.un_how2contactArea .largeTel2 > a { color:#c69c6d;}
+	.un_how2contactArea .how2P { margin-top: 3vw;}
+
+
+	/* ---------------------------------------------------------
+		/siteguide/payment.html - PC Only
+	--------------------------------------------------------- */
+	/* お支払い方法／キャンセルについて
+	------------------------------------------ */
+	.un_paymentData > .barLine { margin-top: 6%;}
+	.un_paymentData > .barLine:nth-of-type(n+2) { margin-top: 12%;}
+	.un_paymentData > table { margin-top: 6%;}
+	.un_paymentData > table td { padding: 3% 4%;}
+	.un_paymentData > table .un_tblHead { width: 25%;}
+	.un_paymentData > table .un_payArrow { height: 40px;}
+	.un_paymentData > table .un_payArrow::before { border-width: 15px 40px 0 40px;}
+	.un_paymentCancel { margin-top: 6%;}
+
+	/* ---------------------------------------------------------
+	/siteguide/sitemap.html - SP Only
+	--------------------------------------------------------- */
+	/* サイトマップ
+	------------------------------------------ */
+	ul.un_sitemapList { margin-top: 6%;}
+
+} /* @media END */

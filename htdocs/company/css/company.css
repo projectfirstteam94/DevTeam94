@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+　company/index.html - PC & SP
+--------------------------------------------------------- */
+/* 会社概要
+------------------------------------------ */
+#companyData table { margin-top: 3vw;}
+#companyData table td { border-bottom: 8px solid  #fff; padding: 0.8vw 1.5vw;}
+#companyData table td.tdHead { width: 17%; min-width: 7em; color: #fff; text-align-last: justify; text-justify:inter-ideograph; background:#6B645F;}
+#companyData table td.tdHead + td { padding-right: 0;}
+#companyData table td .table_small { font-size: 0.8em;}
+
+
+/*--------------------------------------------------------------------------
+　PC Only Style
+--------------------------------------------------------------------------*/
+@media screen and (min-width: 751px) {
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+　SP Only Style
+--------------------------------------------------------------------------*/
+@media screen and (max-width: 750px) {
+	/* 会社概要
+	------------------------------------------ */
+	#companyData table { margin-top: 5vw;}
+	#companyData table td { border-bottom-width: 6px; padding: 1.2vw 4vw;}
+
+} /* @media END */

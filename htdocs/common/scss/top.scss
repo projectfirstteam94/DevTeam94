@@ -1,0 +1,216 @@
+@charset "utf-8";
+@import "mixin";
+/*--------------------------------------------------------------------------
+	TOP Style - PC & SP
+--------------------------------------------------------------------------*/
+.un_introArea, .un_nwesArea, .un_shigeruTour, .un_photoArea { padding: 0 6vw;}
+.un_secTtl { font-size: 26px; text-align: center; letter-spacing: 0.2em; color: $baseColor02;}
+.un_moreLink { text-align: right; margin-top: 2em;}
+
+
+/* TOP：導入部分
+------------------------------------------------ */
+.un_introArea {
+	.un_introLead { font-size: 2.2vw; letter-spacing: 0.2em; line-height: 1.4;}
+	.un_introImg { font-size: 0;
+		> img { width: calc((100% / 3) - 0.5vw); margin-left: 0.5vw; display: inline-block;
+			&:first-of-type { margin-left: 0;}
+		}
+	}
+}
+
+/* TOP：ニュースエリア
+------------------------------------------------ */
+.un_nwesArea { margin-top: 7vw;
+	.bl_columnHalf { width: calc(50% - 3.5vw);}
+	ul.un_newsList {
+		> li { padding: 0.7em 0; border-bottom: 1px solid #000;
+			> a { padding-left: 6.5em; position: relative; display: inline-block;
+				> span { position: absolute; top: 0; left: 0;}
+			}
+		}
+	}
+	.un_restList {
+		.un_restBox { margin-top: 1.8vw; padding-top: 1.8vw; border-top: 1px solid #000;
+			&:first-of-type { padding-top: 0; border-top: none;}
+			&::after { @include cFix;}
+			.un_restImg { width: 30%; float: left; margin-right: 1vw;}
+			.un_restTxt {
+				.un_restTtl { color: #FD7D2C;}
+				> p { line-height: 1.4; margin-top: 0.5em;}
+				.un_moreLink { margin-top: 0.5em;}
+			}
+		}
+	}
+}
+
+/* TOP：お問い合わせについて
+------------------------------------------------ */
+.un_contactInfo { color: #fff; text-align: center; margin-top: 4vw; padding: 3vw 6vw; background: $baseColor02;
+	.un_secTtl { color: $baseColor01;}
+	> p { letter-spacing: 0.2em; margin-top: 1em;}
+	.bl_linkBtn_brown { max-width: 300px; margin: 2vw auto 0;
+		> a { color: $baseColor02;}
+	}
+}
+
+/* TOP：宿泊先を探す
+------------------------------------------------ */
+.un_restInfo { color: #fff; background: $baseColor01;
+	.un_infoHead {
+		> h2 { color: $baseColor02;}
+	}
+	.un_restList {
+		.un_restItem { position: relative; cursor: pointer;
+			> a { color: #fff;}
+			&::after { content: ''; height: 100%; position: absolute; top: 0; right: 0; background: rgba(#000,0.7);}
+			dl.un_restOverlay { position: absolute; top: 50%; right: 0; z-index: 1; transform: translateY(-50%);
+				> dt {
+					> img { width: auto; margin: 0 auto;}
+				}
+			}
+		}
+	}
+}
+
+/* TOP：シゲルと行くポレポレツアー
+------------------------------------------ */
+.un_shigeruTour { margin-top: 6vw;
+	.un_tourTtl { text-align: center; border-bottom: 1px solid #000; margin-top: 1.5vw; padding-bottom: 1vw;}
+	.un_tourTxt { margin-top: 1vw;
+		> p { line-height: 1.4;}
+	}
+}
+
+/* TOP：ハワイの景色
+------------------------------------------------ */
+.un_photoArea {
+	.un_photoList { margin-top: 2vw; display: flex; flex-flow: row wrap;
+		> figure { width: calc((100% - 3vw) / 4); margin: 1vw 0 0 1vw;}
+	}
+}
+
+
+/*--------------------------------------------------------------------------
+	TOP Style - PC Only
+--------------------------------------------------------------------------*/
+@include mediaQ(PC) {
+	/*--------------------------------------------------------------------------
+		TOP Style - PC Only
+	--------------------------------------------------------------------------*/
+	/* TOP：スライダー
+	------------------------------------------------ */
+	.ly_topVisual { height: calc(100vh - 6.2vw); overflow: hidden;}
+	.ly_topVisual img { height: calc(100vh - 6.2vw);}
+
+	/* TOP：宿泊先を探す
+	------------------------------------------------ */
+	.un_restInfo { padding: 3vw 6vw;
+		.un_infoHead { width: 600px; margin: 0 auto; display: flex; align-items: center;
+			> h2 { width: 40%;}
+			> p { width: 60%;}
+		}
+		.un_restList { margin-top: 3vw; display: flex; flex-flow: row wrap; justify-content: space-between;
+			.un_restItem { width: calc(50% - 1vw); margin-top: 2vw;
+				&:nth-of-type(-n+2) { margin-top: 0;}
+				&::after { width: 200px; pointer-events: none;}
+				> a { color: #fff;}
+				dl.un_restOverlay { width: 200px; padding: 0 10px; font-size: 12px; transition: all 0.5s;
+					> dt {
+						> img { height: 56px;}
+					}
+					> dd { height: 0; line-height: 1.6; overflow: hidden; opacity: 0; transition: all 0.3s;}
+				}
+				&:hover {
+					dl.un_restOverlay {
+						> dd { height: 60px; margin-top: 0.5em; opacity: 1; overflow: visible;}
+					}
+				}
+			}
+		}
+	}
+
+	/* TOP：ハワイの景色
+	------------------------------------------ */
+	.un_photoArea { margin-top: 6vw;
+		.un_photoList > figure:nth-of-type(4n+1) { margin-left: 0;}
+	}
+
+
+} /* @media END */
+/*--------------------------------------------------------------------------
+	TOP Style - SP Only
+--------------------------------------------------------------------------*/
+@include mediaQ(SP) {
+	/*--------------------------------------------------------------------------
+		TOP Style - SP Only
+	--------------------------------------------------------------------------*/
+	.un_introArea, .un_nwesArea, .un_shigeruTour, .un_photoArea { padding: 0 4vw;}
+	.un_secTtl { font-size: 24px;}
+
+	/* TOP：スライダー
+	------------------------------------------------ */
+	.bl_topImg { height: calc(100vh - 24.8vw);}
+
+	/* TOP：導入部分
+	------------------------------------------------ */
+	.un_introArea { text-align: center;
+		.un_introLead { font-size: 18px; margin-bottom: 1em;}
+	}
+
+	/* TOP：ニュースエリア
+	------------------------------------------------ */
+	.un_nwesArea { margin-top: 12%;
+		.bl_columnHalf { width: 100%;
+			&:nth-of-type(2) { margin-top: 10%;}
+		}
+		.un_restList {
+			.un_restBox { margin-top: 3%; padding-top: 3%;
+				.un_restImg { width: 30%; margin-right: 3%;}
+			}
+		}
+	}
+
+	/* TOP：お問い合わせについて
+	------------------------------------------------ */
+	.un_contactInfo { margin-top: 4%; padding: 10% 4vw;
+		> p { text-align: left; margin-top: 1.5em;}
+		.bl_linkBtn_brown { width: 80%; margin-top: 8%;}
+	}
+
+	/* TOP：宿泊先を探す
+	------------------------------------------------ */
+	.un_restInfo { padding: 10% 4vw;
+		.un_infoHead { text-align: center;
+			> h2 { font-size: 22px;}
+			> p { margin-top: 6%;}
+		}
+		.un_restList { margin-top: 8%;
+			.un_restItem { width: 100%; margin-top: 4%;
+				&::after { width: 47%;}
+				dl.un_restOverlay { width: 47%;
+					> dt > img { height: 44px;}
+					> dd { display: none;}
+				}
+			}
+		}
+	}
+
+	/* TOP：シゲルと行くポレポレツアー
+	------------------------------------------ */
+	.un_shigeruTour { margin-top: 12%;
+		.un_tourTtl { margin-top: 6%; padding-bottom: 6%;}
+		.un_tourTxt { margin-top: 6%;}
+	}
+
+	/* TOP：ハワイの景色
+	------------------------------------------ */
+	.un_photoArea { margin-top: 14%;
+		.un_photoList { margin-top: 3%;
+			> figure { width: calc((100% - 6%) / 2); margin: 3% 0 0 3%;
+				&:nth-of-type(2n+1) { margin-left: 0;}
+			}
+		}
+	}
+
+} /* @media END */

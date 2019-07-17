@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+// カラーコード
+$baseColor01: #352E32;
+$baseColor02: #c69c6d;
+
+
+// clearfix
+@mixin cFix { content: ""; clear: both; display: block; }
+
+
+// フォントサイズ
+@mixin fz($fzs:15) {
+	font-size:$fzs + px;
+	font-size:($fzs / 10) + rem;
+}
+
+
+// メディアクエリ
+$breakpoints: (
+  'PC': 'screen and (min-width: 751px)',
+  'SP': 'screen and (max-width: 750px)',
+) !default;
+@mixin mediaQ($breakpoint: SP) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
