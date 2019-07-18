@@ -1,7 +1,4 @@
-<?php
-    include_once ("../../Model/model_hoadon.php");
-    $donhang = laySoDonHang();
-?>
+
 <header class="main-header">
     <a href="Home.php" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
@@ -19,15 +16,15 @@
             <ul class="nav navbar-nav">
                 <!-- Notifications: style can be found in dropdown.less -->
                 <li class="dropdown notifications-menu">
-                    <a href="hoadon.php">
+                    <a href="home.php">
                         <i class="fa fa-bell-o"></i>
-                        <span class="label label-warning"> <?php echo $donhang;?></span>
+                        <span class="label label-warning">94</span>
                     </a>
                 </li>
                 <li class="dropdown user user-menu">
                 <li>
-                    <a href="../../../DesignerUser">
-                        <i class="fa fa-fw fa-desktop"></i> <span>Web Business</span>
+                    <a href="../Pages/login.php">
+                        <i class="fa fa-sign-out"></i> <span>Logout</span>
                     </a>
                 </li>
                 </li>
@@ -43,24 +40,12 @@
         <ul class="sidebar-menu">
             <li>
                 <a href="Home.php">
-                    <i class="fa fa-dashboard"></i> <span>Sản Phẩm</span> <i class="fa fa-angle-left pull-right"></i>
+                    <i class="fa fa-send"></i> <span>Bài đăng</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
             </li>
             <li>
-
-                <a href="hoadon.php">
-                    <i class="fa fa-dashboard"></i> <span>Hóa Đơn</span> <span class="badge"><?php echo $donhang;?></span>
-                    <i class="fa fa-angle-left pull-right"></i>
-                </a>
-            </li>
-            <li>
-                <a href="doanhthu.php">
-                    <i class="fa fa-dashboard"></i> <span>Doanh Thu</span> <i class="fa fa-angle-left pull-right"></i>
-                </a>
-            </li>
-            <li>
-                <a href="khuyenmai.php">
-                    <i class="fa fa-dashboard"></i> <span>Khuyến Mại</span> <i class="fa fa-angle-left pull-right"></i>
+                <a href="user.php">
+                    <i class="fa fa-users"></i> <span>Người dùng</span> <i class="fa fa-angle-left pull-right"></i>
                 </a>
             </li>
         </ul>

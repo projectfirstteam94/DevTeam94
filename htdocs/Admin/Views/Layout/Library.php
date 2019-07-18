@@ -13,7 +13,7 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="../../Asset//plugins/iCheck/flat/blue.css">
     <!-- Morris chart -->
-    <link rel="stylesheet" href="../../Asset//plugins/morris/morris.css">
+    <!-- <link rel="stylesheet" href="../../Asset//plugins/morris/morris.css"> -->
     <!-- jvectormap -->
     <link rel="stylesheet" href="../../Asset//plugins/jvectormap/jquery-jvectormap-1.2.2.css">
     <!-- Date Picker -->
@@ -29,11 +29,9 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="./../Asset/js/jquery-3.1.1.js"></script>
     <link href="../../Asset//bootstrap3.3.7/jquery-ui.css" rel="stylesheet" />
-    <script src="../../Asset//bootstrap3.3.7/jquery-ui.js"></script>
+    <!-- <script src="../../Asset//bootstrap3.3.7/jquery-ui.js"></script> -->
 
-    <script src="./../Asset/js/jquery-1.10.2.min.js"></script>
     <!-- jQuery 2.2.3 -->
     <script src="../../Asset/plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- jQuery UI 1.11.4 -->
@@ -46,7 +44,7 @@
     <script src="../../Asset/bootstrap/js/bootstrap.min.js"></script>
     <!-- Morris.js charts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-    <script src="../../Asset/plugins/morris/morris.min.js"></script>
+    <!-- <script src="../../Asset/plugins/morris/morris.min.js"></script> -->
     <!-- Sparkline -->
     <script src="../../Asset/plugins/sparkline/jquery.sparkline.min.js"></script>
     <!-- jvectormap -->
@@ -68,6 +66,6 @@
     <!-- AdminLTE App -->
     <script src="../../Asset/dist/js/app.min.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="../../Asset/dist/js/pages/dashboard.js"></script>
+    <!-- <script src="../../Asset/dist/js/pages/dashboard.js"></script> -->
     <!-- AdminLTE for demo purposes -->
     <script src="../../Asset/dist/js/demo.js"></script>

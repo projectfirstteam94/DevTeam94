@@ -18,9 +18,8 @@
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <?php require_once ("../../Controller/ctr_sanpham.php");?>
-            <a href="themsanpham.php" type="button" class="btn btn-primary btn-sm">
-                <span class="glyphicon glyphicon-plus" ></span> Thêm Sản Phẩm
+            <a href="addoreditpost.php" type="button" class="btn btn-primary btn-sm">
+                <span class="glyphicon glyphicon-plus" ></span> Thêm bài đăng
             </a>
         </section>
 
@@ -50,10 +49,6 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
-                            <?php
-                                if(!isset($arr_sp)) {echo "<h1> Rất tiếc không có sản phẩm nào </h1>"; unset($_POST["btntim"]);}
-                                else if(isset($arr_sp)){
-                            ?>
                             <table class="table table-bordered">
                                 <tbody>
                                 <tr>
@@ -71,41 +66,6 @@
                                     <th>Chú Thích </th>
                                     <th>Tương Tác</th>
                                 </tr>
-                                <?php
-                                        if($arr_sp!=null)
-                                        while ($value = mysqli_fetch_assoc($arr_sp)){
-                                            ?>
-                                                <tr>
-                                                    <td><?php echo $value["Ma"];?></td>
-                                                    <td><?php echo $value["Ten"];?></td>
-                                                    <td><?php echo $value["LoaiSP"];?></td>
-                                                    <td><?php echo $value["KichCo"];?></td>
-                                                    <td><?php echo $value["GiaNhap"];?></td>
-                                                    <td><?php echo $value["GiaBan"];?></td>
-                                                    <td><?php echo $value["NhaCC"];?></td>
-                                                    <td><?php echo $value["NgayNhap"];?></td>
-                                                    <td> <img src="../../Asset/images/<?php echo $value["Anh"];?>" style="width: 60px; height: 60px;"></td>
-                                                    <td><?php echo $value["SoLuong"];?></td>
-                                                    <td><?php echo $value["ChuThich"];?></td>
-                                                    <td>
-                                                        <div style="margin-top: 10px; width: 130px">
-                                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal" onclick="hienMa('<?php echo $value["Ma"];?>','<?php echo $value["KichCo"];?>')">
-                                                                <span class="glyphicon glyphicon-trash"></span> Xóa
-                                                            </button>
-                                                            <a href="suasanpham.php?suasanpham=<?php echo $value["Ma"];?>&kichco=<?php echo $value["KichCo"];?>" class="btn btn-info btn-sm" style="background-color: #34bee9">
-                                                                <i class="fa fa-fw fa-edit"></i> Sửa
-                                                            </a>
-                                                            <a href="khuyenmaisanpham.php?khuyenmai=<?php echo $value["Ma"];?>" class="btn btn-default btn-sm" style="background-color: #fdff17; width: 120px;">
-                                                                <i class="fa fa-fw fa-mail-reply-all"></i> Sale
-                                                            </a>
-                                                        </div>
-
-                                                    </td>
-                                                </tr>
-                                            <?php
-                                        }
-                                    }
-                                ?>
                                 </tbody>
                             </table>
                         </div>
@@ -138,55 +98,6 @@
                         <!-- /.box-body -->
                         <div class="box-footer clearfix">
                             <ul class="pagination pagination-sm no-margin pull-right">
-
-                                <?php
-                                    if(isset($trang)){
-                                        if($trang < 8){
-                                            if(isset($tr)){
-                                                $tien = $tr + 1;
-                                                if($tien > $trang) $tien = $trang;
-                                                $lui = $tr - 1;
-                                                if($lui == 0 ) $lui = 1;
-                                            }
-                                            echo "<li><a href='Home.php?trang=$lui'>«</a></li>";
-                                            for ($i=0;$i<$trang;$i++){
-                                                $j = $i +1;
-                                                echo "<li><a href='Home.php?trang=$j'>".$j."</a></li>";
-                                            }
-                                            echo "<li><a href='Home.php?trang=$tien'>»</a></li>";
-                                        }else {
-                                            if(isset($tr)){
-                                                $tien = $tr + 1;
-                                                if($tien > $trang) $tien = $trang;
-                                                $lui = $tr - 1;
-                                                if($lui == 0 ) $lui = 1;
-                                            }
-                                            echo "<li><a href='Home.php?trang=$lui'>«</a></li>";
-                                            if($tr < 4){
-                                                for ($i=$tr;$i<($tr+3);$i++){
-                                                    echo "<li><a href='Home.php?trang=$i'>".$i."</a></li>";
-                                                    if($i == ($tr+2)){
-                                                        echo "<li><a href='#'>.......</a></li>";
-                                                    }
-                                                }
-                                            }else  if($tr < ($trang-3)){
-                                                for ($i=$tr;$i<($tr+3);$i++){
-                                                    echo "<li><a href='Home.php?trang=$i'>".$i."</a></li>";
-                                                    if($i == ($tr+2)){
-                                                        echo "<li><a href='#'>.......</a></li>";
-                                                    }
-                                                }
-                                            }else{
-                                                for ($i=$trang-3;$i<$trang;$i++){
-                                                    echo "<li><a href='Home.php?trang=$i'>".$i."</a></li>";
-                                                }
-
-                                            }
-                                            echo "<li><a href='Home.php?trang=$trang'>".$trang."</a></li>";
-                                            echo "<li><a href='Home.php?trang=$tien'>»</a></li>";
-                                        }
-                                    }
-                                ?>
                             </ul>
                         </div>
                     </div>
