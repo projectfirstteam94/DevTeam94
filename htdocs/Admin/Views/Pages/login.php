@@ -14,43 +14,33 @@
   <link rel="stylesheet" href="../../Asset/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../Asset/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../Asset/dist/css/AdminLTE.css">
   <?php require_once ("../../Controller/ctr_login.php");?>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="login.php"><b>Admin</b></a>
+    <a href="login.php"><b>ハワイアンスカイ</b></a>
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body">
-    <p class="login-box-msg">Sign in to start your session</p>
+  <div class="login-box-body" style="height: 220px;">
+    <p class="login-box-msg" style="font-size: 16px;">システムログイン</p>
 
     <form method="post">
       <div class="form-group has-feedback">
-        <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
         <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Remember Me
-            </label>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" id="btnlogin" name="btnlogin" class="btn btn-primary btn-block btn-flat">Sign In</button>
-        </div>
-        <!-- /.col -->
+      <div style="width: 30%; margin: 20px auto;">
+          <button type="submit" id="btnlogin" name="btnlogin" class="btn btn-primary btn-block btn-flat">
+          <span class="glyphicon glyphicon-log-in"></span>&nbsp ログイン
+          </button>
       </div>
     </form>
-    <a href="login.php">I forgot my password</a><br>
-    <a href="login.php" class="text-center">Register a new membership</a>
 
   </div>
   <!-- /.login-box-body -->
