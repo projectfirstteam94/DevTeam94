@@ -25,7 +25,7 @@
     <a href="login.php"><b>ハワイアンスカイ</b></a>
   </div>
   <!-- /.login-logo -->
-  <div class="login-box-body">
+  <div class="login-box-body" style="height: 220px;">
     <p class="login-box-msg" style="font-size: 16px;">システムログイン</p>
 
     <form method="post" id="frlogin" name="frlogin">
