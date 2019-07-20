@@ -1,0 +1,10 @@
+.lable_custom{
+    text-align: left;
+    margin-top: 5px;
+}
+
+.lable_custom_right{
+    text-align: left;
+    margin-top: 5px;
+    padding: 0px;
+}

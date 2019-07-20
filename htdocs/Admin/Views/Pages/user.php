@@ -9,7 +9,7 @@
     require_once ("../Layout/Library.php");
 ?>
 </head>
-<body class="skin-blue sidebar-mini">
+<body class="skin-blue sidebar-mini fixed">
 <div class="wrapper">
 
 <?php require_once ("../Layout/Menu.php");?>
