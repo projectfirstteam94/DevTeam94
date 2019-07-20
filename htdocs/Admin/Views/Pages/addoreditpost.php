@@ -18,8 +18,8 @@
             <!-- Right side column. Contains the navbar and content of the page -->
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
-                <section class="content-header">
-
+                <section class="content-header" style="text-align: center;">
+					<h3>掲載新規登録</h3>
                 </section>
                 <section class="content">
                     <div class="row">
@@ -83,23 +83,19 @@
                                               <div class="form-group">
                                                   <label for="alt1" class="col-sm-2 lable_custom">picture 1</label>
                                                   <label for="alt1" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt1" name="alt1"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control" id="file1" name="file1"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control"  id="url1" name="url1"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                         <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 1 -->
@@ -107,23 +103,19 @@
                                               <div class="form-group">
                                                   <label for="alt2" class="col-sm-2 lable_custom">picture 2</label>
                                                   <label for="alt2" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt2" name="alt2"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control"  id="file2" name="file2"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control"  id="url2" name="url2"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                            <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 2 -->
@@ -131,23 +123,19 @@
                                               <div class="form-group">
                                                   <label for="alt3" class="col-sm-2 lable_custom">picture 3</label>
                                                   <label for="alt3" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt3" name="alt3"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control"  id="file3" name="file3"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="url3" name="url3"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 3 -->
@@ -155,23 +143,19 @@
                                               <div class="form-group">
                                                   <label for="alt4" class="col-sm-2 lable_custom">picture 4</label>
                                                   <label for="alt4" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt4" name="alt4"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control"  id="file4" name="file4"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control"  id="ur4l" name="url4"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 4 -->
@@ -179,23 +163,19 @@
                                               <div class="form-group">
                                                   <label for="alt5" class="col-sm-2 lable_custom">picture 5</label>
                                                   <label for="alt5" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt5" name="tyaltpe5"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control" id="file5" name="file5
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="url5" name="url5"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 5 -->
@@ -203,23 +183,19 @@
                                               <div class="form-group">
                                                   <label for="alt6" class="col-sm-2 lable_custom">picture 6</label>
                                                   <label for="alt6" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt6" name="alt6"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control" id="file6" name="file6"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="url6" name="url6"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 6-->
@@ -227,23 +203,19 @@
                                               <div class="form-group">
                                                   <label for="alt7" class="col-sm-2 lable_custom">picture 7</label>
                                                   <label for="alt7" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt7" name="alt7"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control" id="file7" name="file7"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="url7" name="url7"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 7 -->
@@ -251,23 +223,19 @@
                                               <div class="form-group">
                                                   <label for="alt8" class="col-sm-2 lable_custom">picture 8</label>
                                                   <label for="alt8" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt8" name="alt8"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control"  id="file8" name="file8"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="url8" name="url8"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 8 -->
@@ -275,23 +243,19 @@
                                               <div class="form-group">
                                                   <label for="alt9" class="col-sm-2 lable_custom">picture 9</label>
                                                   <label for="alt9" class="col-sm-1 lable_custom">alt</label>
-                                                  <div class="col-sm-7">
+                                                  <div class="col-sm-9">
                                                       <input type="text" class="form-control" id="alt9" name="alt9"
                                                           placeholder="alt">
                                                   </div>
-                                                  <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noarea" name="noarea"
-                                                          placeholder="stt">
-                                                  </div>
                                               </div>
                                               <div class="form-group">
-                                                  <div class="col-sm-6">
+                                                  <div class="col-sm-10">
                                                       <input type="file" class="form-control" id="text" id="file9" name="file9"
                                                           placeholder="text">
                                                   </div>
-                                                  <div class="col-sm-6">
-                                                      <input type="text" class="form-control" id="text" id="url9" name="url9"
-                                                          placeholder="url">
+                                                  <div class="col-sm-2">
+                                                      <input type="number" class="form-control" id="noarea" name="noarea"
+                                                          placeholder="noImg">
                                                   </div>
                                               </div>
                                               <!-- 9 -->
@@ -320,13 +284,13 @@
                                                       <input type="number" class="form-control" id="min_night" name="min_night"
                                                           placeholder="min_night">
                                                   </div>
-                                                  <label for="min_night" class="col-sm-1 lable_custom_right">number </label>
+                                                  <label for="min_night" class="col-sm-1 lable_custom_right">night </label>
                                                   <label for="max_people" class="col-sm-2 lable_custom">max_people</label>
                                                   <div class="col-sm-3">
                                                       <input type="number" class="form-control" id="max_people" name="max_people"
                                                           placeholder="max_people">
                                                   </div>
-                                                  <label for="max_people" class="col-sm-1 lable_custom_right">number </label>
+                                                  <label for="max_people" class="col-sm-1 lable_custom_right">people </label>
                                               </div>
                                               <div class="form-group">
                                                   <label for="price" class="col-sm-2 lable_custom">price</label>
