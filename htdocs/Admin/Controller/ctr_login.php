@@ -4,6 +4,7 @@
 session_start();
 session_unset(); 
 $_SESSION['loginsuccess'] = "false";
+$_SESSION['user_id'] = 0;
 // thực hiện đăng nhập
         if($_SERVER["REQUEST_METHOD"] == "POST") {
             $username = $_POST["username"];

@@ -13,6 +13,7 @@
 <div class="wrapper">
 
 <?php require_once ("../Layout/Menu.php");?>
+<?php require_once ("../../Controller/ctr_post.php");?>
 
     <div class="content-wrapper">
         <section class="content-header">
@@ -25,7 +26,7 @@
                 <div class="col-md-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <form method="post" class="sidebar-form" style="border: 0px">
+                            <!-- <form method="post" class="sidebar-form" style="border: 0px">
                             <div class="form-group col-md-2">
                                     <select class="form-control" name="chontimkiem">
                                         <option value="ma">Mã</option>
@@ -40,25 +41,70 @@
                                     </button>
                                   </span>
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
                         <div class="box-body">
                             <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>id </th>
+                                        <th>no </th>
+                                        <th>image </th>
+                                        <th>name </th>
+                                        <th>title</th>
+                                        <th>key_word</th>
+                                        <th>descriptions</th>
+                                        <th>num_people_max</th>
+                                        <th>num_nights_min</th>
+                                        <th>num_bed_room</th>
+                                        <th>num_bath_room</th>
+                                        <th>price</th>
+                                        <th>nametype</th>
+                                        <th>namearea</th>
+                                        <th>action</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
-                                <tr>
-                                    <th>id </th>
-                                    <th>no </th>
-                                    <th>name </th>
-                                    <th>title</th>
-                                    <th>key_word</th>
-                                    <th>descriptions</th>
-                                    <th>num_people_max</th>
-                                    <th>num_nights_min</th>
-                                    <th>area_id</th>
-                                    <th>num_bed_room</th>
-                                    <th>num_bath_room</th>
-                                    <th>action</th>
-                                </tr>
+                                <?php
+                                        if($arr_post!=null){
+                                        while ($value = mysqli_fetch_assoc($arr_post)){
+                                            ?>
+                                                <tr>
+                                                    <td><?php echo $value->id;?></td>
+                                                    <td><?php echo $value->no;?></td>
+                                                    <td><img src="<?php $value->id;?>" style="width: 60px; height: 60px;"></td>
+                                                    <td><?php echo $value->name;?></td>
+                                                    <td><?php echo $value->title;?></td>
+                                                    <td><?php echo $value->key_word;?></td>
+                                                    <td><?php echo $value->descriptions;?></td>
+                                                    <td><?php echo $value->num_people_max;?></td>
+                                                    <td><?php echo $value->num_nights_min;?></td>
+                                                    <td><?php echo $value->num_bed_room;?></td>
+                                                    <td><?php echo $value->num_bath_room;?></td>
+                                                    <td><?php echo $value->price;?></td>
+                                                    <td><?php echo $value->nametype;?></td>
+                                                    <td><?php echo $value->namearea;?></td>
+                                                    <td>
+                                                        <div style="margin-top: 10px; width: 130px">
+                                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal" onclick="hienMa('<?php echo $value["Ma"];?>','<?php echo $value["KichCo"];?>')">
+                                                                <span class="glyphicon glyphicon-trash"></span> Xóa
+                                                            </button>
+                                                            <a href="suasanpham.php?suasanpham=<?php echo $value["Ma"];?>&kichco=<?php echo $value["KichCo"];?>" class="btn btn-info btn-sm" style="background-color: #34bee9">
+                                                                <i class="fa fa-fw fa-edit"></i> Sửa
+                                                            </a>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            <?php
+                                        }
+                                    }else{
+                                      ?>
+                                        <tr>
+                                            <td colspan="15"><h3 style="color:red;text-align:center"> Không có dữ liệu</h3></td>
+                                        </tr>
+                                      <?php
+                                    }
+                                ?>
                                 </tbody>
                             </table>
                         </div>
