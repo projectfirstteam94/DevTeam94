@@ -44,23 +44,16 @@
                             </form> -->
                         </div>
                         <div class="box-body">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-striped dataTable">
                                 <thead>
                                     <tr>
-                                        <th>id </th>
-                                        <th>no </th>
-                                        <th>image </th>
-                                        <th>name </th>
-                                        <th>title</th>
-                                        <th>key_word</th>
-                                        <th>descriptions</th>
-                                        <th>num_people_max</th>
-                                        <th>num_nights_min</th>
-                                        <th>num_bed_room</th>
-                                        <th>num_bath_room</th>
-                                        <th>price</th>
+                                        <th>ID </th>
+                                        <th>Image </th>
+                                        <th>Name </th>
                                         <th>nametype</th>
                                         <th>namearea</th>
+										<th>Create Date</th>
+										<th>Create User</th>
                                         <th>action</th>
                                     </tr>
                                 </thead>
@@ -71,19 +64,12 @@
                                             ?>
                                                 <tr>
                                                     <td><?php echo $value->id;?></td>
-                                                    <td><?php echo $value->no;?></td>
                                                     <td><img src="<?php $value->id;?>" style="width: 60px; height: 60px;"></td>
                                                     <td><?php echo $value->name;?></td>
-                                                    <td><?php echo $value->title;?></td>
-                                                    <td><?php echo $value->key_word;?></td>
-                                                    <td><?php echo $value->descriptions;?></td>
-                                                    <td><?php echo $value->num_people_max;?></td>
-                                                    <td><?php echo $value->num_nights_min;?></td>
-                                                    <td><?php echo $value->num_bed_room;?></td>
-                                                    <td><?php echo $value->num_bath_room;?></td>
-                                                    <td><?php echo $value->price;?></td>
                                                     <td><?php echo $value->nametype;?></td>
                                                     <td><?php echo $value->namearea;?></td>
+													<td><?php echo $value->createDate;?></td>
+                                                    <td><?php echo $value->createUser;?></td>
                                                     <td>
                                                         <div style="margin-top: 10px; width: 130px">
                                                             <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal" onclick="hienMa('<?php echo $value["Ma"];?>','<?php echo $value["KichCo"];?>')">

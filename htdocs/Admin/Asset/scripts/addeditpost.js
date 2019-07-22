@@ -17,38 +17,39 @@ function fnc_SubmitPost() {
     var min_night = $("#min_night").val();
     var max_people = $("#max_people").val();
     var price = $("#price").val();
-    var sub_text = $("#sub_text").val();
+    var sub_text = $("#sub_text").val();	
+	const errBlank = " không được trống";
 
     var check = true;
     if (name === "" || name === undefined || name === null) {
         check = false
-        showError("errorname", "name không được trống");
+        showError("errorname", "name" + errBlank);
     } else {
         showError("errorname", "");
     }
     if (keyword === "" || keyword === undefined || keyword === null) {
         check = false
-        showError("errorkeyword", "keyword không được trống");
+        showError("errorkeyword", "keyword" + errBlank);
     } else {
         showError("errorkeyword", "");
     }
     if (description === "" || description === undefined || description === null) {
         check = false
-        showError("errordescription", "description không được trống");
+        showError("errordescription", "description" + errBlank);
     } else {
         showError("errordescription", "");
     }
 
     if (title === "" || title === undefined || title === null) {
         check = false
-        showError("errortitle", "title không được trống");
+        showError("errortitle", "title" + errBlank);
     } else {
         showError("errortitle", "");
     }
 
     if (noImg === "" || noImg === undefined || noImg === null) {
         check = false
-        showError("errornoImg", "stt không được trống");
+        showError("errornoImg", "stt" + errBlank);
     } else {
         if (noImg < 1) {
             check = false
@@ -59,7 +60,7 @@ function fnc_SubmitPost() {
     }
     if (faccity_conten === "" || faccity_conten === undefined || faccity_conten === null) {
         check = false
-        showError("errorfaccity_conten", "faccity_conten không được trống");
+        showError("errorfaccity_conten", "faccity_conten" + errBlank);
     } else {
         if (faccity_conten < 1) {
             check = false
@@ -70,7 +71,7 @@ function fnc_SubmitPost() {
     }
     if (bed_room === "" || bed_room === undefined || bed_room === null) {
         check = false
-        showError("errorbed_room", "bed_room không được trống");
+        showError("errorbed_room", "bed_room" + errBlank);
     } else {
         if (bed_room < 1) {
             check = false
@@ -82,7 +83,7 @@ function fnc_SubmitPost() {
 
     if (bath_room === "" || bath_room === undefined || bath_room === null) {
         check = false
-        showError("errorbath_room", "bath_room không được trống");
+        showError("errorbath_room", "bath_room" + errBlank);
     } else {
         if (bath_room < 1) {
             check = false
@@ -93,7 +94,7 @@ function fnc_SubmitPost() {
     }
     if (min_night === "" || min_night === undefined || min_night === null) {
         check = false
-        showError("errormin_night", "min_night không được trống");
+        showError("errormin_night", "min_night" + errBlank);
     } else {
         if (min_night < 1) {
             check = false
@@ -104,7 +105,7 @@ function fnc_SubmitPost() {
     }
     if (max_people === "" || max_people === undefined || max_people === null) {
         check = false
-        showError("errormax_people", "max_people không được trống");
+        showError("errormax_people", "max_people" + errBlank);
     } else {
         if (max_people < 1) {
             check = false
@@ -113,9 +114,11 @@ function fnc_SubmitPost() {
             showError("errormax_people", "");
         }
     }
+	
+
     if (price === "" || price === undefined || price === null) {
         check = false
-        showError("errorprice", "price không được trống");
+        showError("errorprice", "price" + errBlank);
     } else {
         if (price < 1) {
             check = false
@@ -124,18 +127,7 @@ function fnc_SubmitPost() {
             showError("errorprice", "");
         }
     }
-    if (sub_text === "" || sub_text === undefined || sub_text === null) {
-        check = false
-        showError("errorsub_text", "sub_text không được trống");
-    } else {
-        if (sub_text < 1) {
-            check = false
-            showError("errorsub_text", "sub_text phải > 0");
-        } else {
-            showError("errorsub_text", "");
-        }
-    }
-
+	
     var arrExit = [];
     arrNo = [];
     for (i = 1; i < 10; i++) {
@@ -160,19 +152,24 @@ function fnc_SubmitPost() {
 
         if ($("#" + idalt).val() === "" || $("#" + idalt).val() === undefined || $("#" + idalt).val() === null) {
             check = false
-            showError(erroralt, "alt không được trống");
+            showError(erroralt, "alt" + errBlank);
         } else {
             showError(erroralt, "");
         }
 
         if ($("#" + idnoImg).val() === "" || $("#" + idnoImg).val() === undefined || $("#" + idnoImg).val() === null) {
             check = false
-            showError(errornoImg, "stt không được trống");
+            showError(errornoImg, "stt" + errBlank);
         } else {
             if ($("#" + idnoImg).val() < 1) {
                 check = false
                 showError(errornoImg, "stt phải > 0");
-            } else {
+            }
+            else if ($("#" + idnoImg).val() > 99) {
+                check = false
+                showError(errornoImg, "stt phải < 99");
+            }
+			else {
                 arrNo.push($("#" + idnoImg).val());
                 showError(errornoImg, "");
             }
