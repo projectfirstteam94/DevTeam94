@@ -31,7 +31,6 @@
                     <div class="row">
                         <div class="col-md-12">
                           <div class="col-md-2">
-                          
                           </div>
                           <div class="col-md-8">
                           <div class="box box-info">
@@ -78,7 +77,7 @@
                                                   </div>
                                               </div>
                                               <div class="form-group">
-                                                  <label for="inputPassword3" class="col-sm-12 lable_custom">title <code>*</code></label>
+                                                  <label for="title" class="col-sm-12 lable_custom">title <code>*</code></label>
                                                   <div class="col-sm-12">
                                                       <input type="text" class="form-control" id="title"  name="title"
                                                           placeholder="title">
@@ -118,11 +117,11 @@
                                               <!-- <img src="../../Upload/Images/1_0_225202-tuyenvietnam-1558330282786.jpg" /> -->
                                               <div class="form-group">
                                                   <div class="col-sm-10">
-                                                      <input type="file" class="form-control" id="file1" name="file1"
+                                                      <input type="file" class="form-control" id="file1" name="file1" value="../../Upload/Images/1_0_225202-tuyenvietnam-1558330282786.jpg"
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                         <input type="number" class="form-control" id="noImg1" name="noImg1" min="1" max="99" value="1"
+                                                         <input type="number" class="form-control" id="noImg1" name="noImg1" min="1" max="9" value="1"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg1" style="display:none"></div>
                                                   </div>
@@ -147,7 +146,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                            <input type="number" class="form-control" id="noImg2" name="noImg2" min="1" max="99" value="2"
+                                                            <input type="number" class="form-control" id="noImg2" name="noImg2" min="1" max="9" value="2"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg2" style="display:none"></div>
                                                   </div>
@@ -172,7 +171,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noImg3" name="noImg3" min="1" max="99" value="3"
+                                                      <input type="number" class="form-control" id="noImg3" name="noImg3" min="1" max="9" value="3"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg3" style="display:none"></div>
                                                   </div>
@@ -197,7 +196,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control"  id="noImg4" name="noImg4" min="1" max="99" value="4"
+                                                      <input type="number" class="form-control"  id="noImg4" name="noImg4" min="1" max="9" value="4"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg4" style="display:none"></div>
                                                   </div>
@@ -222,7 +221,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control"  id="noImg5" name="noImg5" min="1" max="99" value="5"
+                                                      <input type="number" class="form-control"  id="noImg5" name="noImg5" min="1" max="9" value="5"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg5" style="display:none"></div>
                                                   </div>
@@ -247,7 +246,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control"  id="noImg6" name="noImg6" min="1" max="99" value="6"
+                                                      <input type="number" class="form-control"  id="noImg6" name="noImg6" min="1" max="9" value="6"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg6" style="display:none"></div>
                                                   </div>
@@ -272,7 +271,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control"  id="noImg7" name="noImg7" min="1" max="99" value="7"
+                                                      <input type="number" class="form-control"  id="noImg7" name="noImg7" min="1" max="9" value="7"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg7" style="display:none"></div>
                                                   </div>
@@ -297,7 +296,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noImg8" name="noImg8" min="1" max="99" value="8"
+                                                      <input type="number" class="form-control" id="noImg8" name="noImg8" min="1" max="9" value="8"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg8" style="display:none"></div>
                                                   </div>
@@ -322,7 +321,7 @@
                                                           placeholder="text">
                                                   </div>
                                                   <div class="col-sm-2">
-                                                      <input type="number" class="form-control" id="noImg9" name="noImg9" min="1" max="99" value="9"
+                                                      <input type="number" class="form-control" id="noImg9" name="noImg9" min="1" max="9" value="9"
                                                           placeholder="noImg">
                                                           <div class="validate-font" id="errornoImg9" style="display:none"></div>
                                                   </div>
@@ -365,7 +364,7 @@
                                                   <label for="min_night" class="col-sm-1 lable_custom_right">night </label>
                                                   <label for="max_people" class="col-sm-2 lable_custom">max_people<code>*</code></label>
                                                   <div class="col-sm-3">
-                                                      <input type="number" class="form-control" id="max_people" name="max_people" min="1" value="2"
+                                                      <input type="number" class="form-control" id="max_people" name="max_people" min="2" value="2"
                                                           placeholder="max_people">
                                                           <div class="validate-font" id="errormax_people" style="display:none"></div>
                                                   </div>
@@ -374,7 +373,7 @@
                                               <div class="form-group">
                                                   <label for="price" class="col-sm-2 lable_custom">price<code>*</code></label>
                                                   <div class="col-sm-4">
-                                                      <input type="number" class="form-control" id="price" name="price" min="0" value="1"
+                                                      <input type="number" class="form-control" id="price" name="price" min="1" value="1"
                                                           placeholder="price">
                                                   </div>
                                                   <label for="price" class="col-sm-2 lable_custom_right" >usd</label>
@@ -395,8 +394,8 @@
                                           </div>
                                           <!-- /.box-body -->
                                           <div class="box-footer">
-                                              <button type="button"  name="btnclose" id="btnclose" class="btn btn-default pull-left">Close</button>
-                                              <button type="button" name="btnsave" id="btnsave" class="btn btn-info pull-right" onclick="fnc_SubmitPost()">Save</button>
+                                              <button type="button"  name="btnclose" id="btnclose" class="btn btn-default pull-right">Close</button>
+                                              <button type="button" name="btnsave" id="btnsave" class="btn btn-info pull-left" onclick="fnc_SubmitPost()">Confirm</button>
                                           </div>
                                           <!-- /.box-footer -->
                                       </form>

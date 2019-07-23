@@ -16,11 +16,14 @@ if(isset($_GET["id"])){
         <strong>Không tìm thấy bài đăng</strong></div>';
         return false;
     }
+    $obj_post = GeyPostById($id);
+    //print_r($obj_post);
     $edit = true;
     $stt = $id ;
 }else{
     $stt = GetSttPost();
 }
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $type =  $_POST["type"];
@@ -132,68 +135,59 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $customname8 = "";
         $customname9 = "";
         
-        if($checkerror ==  true){
-            $customname1 = '../../Upload/Images/' . $_POST['noImg1'] . "_" . $stt ."_" . $_FILES['file1']['name'];
+        if($checkerror ==  false){
+            $customname1 = $_POST['noImg1'] . "_" . $stt ."_" . $_FILES['file1']['name'];
             if(((int)$_FILES['file1']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr1= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file1']['tmp_name'], $customname1);
             }
     
-            $customname2 = '../../Upload/Images/' .$_POST['noImg2'] . "_" . $stt ."_" . $_FILES['file2']['name'];
+            $customname2 = $_POST['noImg2'] . "_" . $stt ."_" . $_FILES['file2']['name'];
             if(((int)$_FILES['file2']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr2= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file2']['tmp_name'],$customname2);
             }
     
-            $customname3 = '../../Upload/Images/' .$_POST['noImg3'] . "_" . $stt ."_" .$_FILES['file3']['name'];
+            $customname3 = $_POST['noImg3'] . "_" . $stt ."_" .$_FILES['file3']['name'];
             if(((int)$_FILES['file3']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr3= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file3']['tmp_name'], $customname3);
             }
     
-            $customname4 = '../../Upload/Images/' .$_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file4']['name'];
+            $customname4 = $_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file4']['name'];
             if(((int)$_FILES['file4']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr4= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file4']['tmp_name'],  $customname4);
             }
     
-            $customname5 = '../../Upload/Images/' .$_POST['noImg5'] . "_" . $stt ."_" . $_FILES['file5']['name'];
+            $customname5 = $_POST['noImg5'] . "_" . $stt ."_" . $_FILES['file5']['name'];
             if(((int)$_FILES['file5']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr5= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file5']['tmp_name'], $customname5);
             }
     
-            $customname6 = '../../Upload/Images/' .$_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file6']['name'];
+            $customname6 = $_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file6']['name'];
             if(((int)$_FILES['file6']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr6= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file6']['tmp_name'], $customname6);
             }
     
-            $customname7 = '../../Upload/Images/' .$_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file7']['name'];
+            $customname7 = $_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file7']['name'];
             if(((int)$_FILES['file7']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr7= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file7']['tmp_name'], $customname7);
             }
     
-            $customname8 = '../../Upload/Images/' .$_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file8']['name'];
+            $customname8 = $_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file8']['name'];
             if(((int)$_FILES['file8']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr8= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file8']['tmp_name'], $customname8);
             }
     
-            $customname9 = '../../Upload/Images/' .$_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file9']['name'];
+            $customname9 = $_POST['noImg4'] . "_" . $stt ."_" . $_FILES['file9']['name'];
             if(((int)$_FILES['file9']['size'] / 1024) >= 1024){
+                $checkerror = true;
                 $stserr9= "Dung lượng file không thể lớn hơn 1Mb";
-            }else{
-                move_uploaded_file($_FILES['file9']['tmp_name'], $customname9);
             }
         }
         $arrImage = [];
@@ -252,10 +246,45 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         array_push($arrImage,$image9);
 
         if($edit){
-            
-            UpdatePostImage($post,$arrImage);
+            if(UpdatePostImage($post,$arrImage) != null){
+                $urlnew = "addoreditpost.php?id=" . UpdatePostImage($post,$arrImage);
+              //  echo("<script>history.replaceState({},'','$urlnew');</script>");
+                echo '
+                    <div class="alert alert-success alert-dismissable fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Sửa thành thành công!</strong></div>';
+                    header("Location:/Views/Pages/Home.php");
+            }else{
+                echo '
+                <div class="alert alert-warning alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Sửa thất bại!</strong></div>';
+            }
         }else{
-            InsertPostImage($post,$arrImage);
+            if(InsertPostImage($post,$arrImage) != null){
+                move_uploaded_file($_FILES['file1']['tmp_name'], '../../Upload/Images/' .$customname1);
+                move_uploaded_file($_FILES['file2']['tmp_name'], '../../Upload/Images/' .$customname2);
+                move_uploaded_file($_FILES['file3']['tmp_name'], '../../Upload/Images/' .$customname3);
+                move_uploaded_file($_FILES['file4']['tmp_name'], '../../Upload/Images/' .$customname4);
+                move_uploaded_file($_FILES['file5']['tmp_name'], '../../Upload/Images/' .$customname5);
+                move_uploaded_file($_FILES['file6']['tmp_name'], '../../Upload/Images/' .$customname6);
+                move_uploaded_file($_FILES['file7']['tmp_name'], '../../Upload/Images/' .$customname7);
+                move_uploaded_file($_FILES['file8']['tmp_name'], '../../Upload/Images/' .$customname8);
+                move_uploaded_file($_FILES['file9']['tmp_name'], '../../Upload/Images/' .$customname9);
+                //$urlnew = "addoreditpost.php?id=" . InsertPostImage($post,$arrImage);
+                $urlnew = "home.php";
+                echo '
+                    <div class="alert alert-success alert-dismissable fade in">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Thêm mới thành công!</strong></div>';
+                    header("Location:/Views/Pages/Home.php");
+            }{
+                echo '
+                <div class="alert alert-warning alert-dismissable fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <strong>Thêm mới Thất Bại!</strong></div>';
+            }
         }
 }
+
 ?>

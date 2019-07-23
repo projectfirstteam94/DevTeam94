@@ -74,4 +74,5 @@
     <!-- <script src="../../Asset/dist/js/pages/dashboard.js"></script> -->
     <!-- AdminLTE for demo purposes -->
     <script src="../../Asset/dist/js/demo.js"></script>
+    <script src="../../Asset/js/jquery-confirm.js"></script>
    
